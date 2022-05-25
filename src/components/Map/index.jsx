@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "./style.css";
 import 'mapbox-gl/dist/mapbox-gl.css';
-import ReactMapGL, { Marker, Popup } from 'react-map-gl';
+import ReactMapGL, { Marker, Popup, NavigationControl } from 'react-map-gl';
 import pinUrl from '/Users/katerina.tuckova/Desktop/daweb/babyfriendly/src/img/pin.svg';
 
 
@@ -54,6 +54,7 @@ export const Map = () => {
             onClose={() => setPopupOpen(false)}>
             Cacao
           </Popup>}
+        <NavigationControl position={"top-rigth"} showZoom={true} />
       </ReactMapGL>
     </div >
   )
