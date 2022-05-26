@@ -1,0 +1,8 @@
+.view-switch {
+  border-radius: 20%;
+  aspect-ratio: 1/1;
+  height: 15px;
+  z-index: 1;
+  margin: auto;
+}
+

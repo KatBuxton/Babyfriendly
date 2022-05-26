@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+.list-item {
+  background-image: url("/Users/katerina.tuckova/Desktop/daweb/babyfriendly/src/img/placeholder.png");
+  background-size: cover;
+  height: 170px;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 10px;
+  aspect-ratio: 3.5 /2;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+
+.list-item__info {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  text-align: left;
+  height: 40%;
+  backdrop-filter: blur(10px);
+  border-radius: 10px;
+}
+
+h2, h3 {
+  margin-left: 10px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
