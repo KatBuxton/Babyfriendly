@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import "./style.css";
 import 'mapbox-gl/dist/mapbox-gl.css';
 import ReactMapGL, { Marker, Popup, NavigationControl } from 'react-map-gl';
-import pinUrl from '/Users/katerina.tuckova/Desktop/daweb/babyfriendly/src/img/pin.svg';
+import pinUrl from '../../img/pin.svg';
 
 
 export const Map = () => {
@@ -13,6 +13,10 @@ export const Map = () => {
   })
   const [popupOpen, setPopupOpen] = useState(false)
 
+  const navControlStyle = {
+    right: 10,
+    top: 10
+  }
 
   return (
     <div className="map">
@@ -43,18 +47,19 @@ export const Map = () => {
           ],
         }}
       >
-        <Marker latitude={50.08854} longitude={14.42991}>
+        <Marker latitude={50.08823250244053} longitude={14.43000132678235} offsetLeft={-25} offsetTop={-50}>
           <button className="marker-button"
             onClick={() => setPopupOpen(true)}>
-            <img src={pinUrl} width={50} height={50} offsetleft={-25} offsettop={-50} alt="Cacao" />
+            <img src={pinUrl} width={50} height={50} alt="Cacao" />
           </button>
         </Marker>
         {popupOpen &&
-          <Popup latitude={50.08854} longitude={14.42991}
+          <Popup latitude={50.08823250244053} longitude={14.43000132678235}
+            offsetTop={-60}
             onClose={() => setPopupOpen(false)}>
             Cacao
           </Popup>}
-        <NavigationControl position={"top-rigth"} showZoom={true} />
+        <NavigationControl style={navControlStyle} showZoom={true} />
       </ReactMapGL>
     </div >
   )

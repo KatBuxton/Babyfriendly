@@ -1,8 +1,13 @@
 .view-switch {
   border-radius: 20%;
   aspect-ratio: 1/1;
-  height: 15px;
+  height: 24px;
   z-index: 1;
   margin: auto;
 }
 
+@media (min-width: 768px) {
+.view-switch{
+  display: none;
+}
+}

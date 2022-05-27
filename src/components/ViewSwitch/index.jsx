@@ -1,17 +1,18 @@
 import React, { useState } from 'react';
-import mapIconUrl from '/Users/katerina.tuckova/Desktop/daweb/babyfriendly/src/img/map.svg';
-import listIconUrl from '/Users/katerina.tuckova/Desktop/daweb/babyfriendly/src/img/list.svg';
+import mapIconUrl from '../../img/map.svg';
+import listIconUrl from '../../img/list.svg';
+import "./style.css";
 
 
 export const ViewSwitch = () => {
   const [listView, setListView] = useState(false)
 
   return (
-    <div
+    <div className="view-switch"
       onClick={() => { listView === true ? setListView(false) : setListView(true) }}
-      className="view-switch">
-      <img src={listView === true ? mapIconUrl : listIconUrl} />
-    </div>
+    >
+      <img src={listView === true ? mapIconUrl : listIconUrl} alt={listView === true ? "ikona seznamu" : "ikona mapy"} />
+    </div >
   )
-
 }
+
