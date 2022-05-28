@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 .list-item {
-  background-image: url("/Users/katerina.tuckova/Desktop/daweb/babyfriendly/src/img/placeholder.png");
+  background-image: url("../../img/placeholders/placeholder-cafe.png");
   background-size: cover;
   height: 170px;
   display: flex;

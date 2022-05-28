@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./style.css"
 import { Logo } from '../Logo';
 import { List } from '../List';
@@ -13,5 +13,4 @@ export const Column = () => {
       <List />
     </div>
   )
-
 }
