@@ -4,16 +4,16 @@ import listIconUrl from '../../img/list.svg';
 import "./style.css";
 
 
-export const ViewSwitch = () => {
-  const [listView, setListView] = useState(false)
+export const ViewSwitch = ({ listViewVisible, setListViewVisible }) => {
 
   return (
-    <div
-      className="view-switch"
-      onClick={() => listView === true ? setListView(false) : setListView(true)}
-    >
-      <img src={listView === true ? mapIconUrl : listIconUrl} alt={listView === true ? "ikona seznamu" : "ikona mapy"} />
-    </div >
+    <div className='container'>
+      <div className="view-switch"
+        onClick={() => setListViewVisible(!listViewVisible)}
+      >
+        <img src={listViewVisible === true ? mapIconUrl : listIconUrl} alt={listViewVisible === true ? "ikona seznamu" : "ikona mapy"} />
+      </div >
+    </div>
   )
 }
 

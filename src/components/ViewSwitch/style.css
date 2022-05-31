@@ -1,9 +1,25 @@
+.container {
+  position: relative;
+}
+
 .view-switch {
-  border-radius: 20%;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  display: flex;
+  border-radius: 50%;
   aspect-ratio: 1/1;
-  height: 24px;
+  height: 40px;
   z-index: 1;
   margin: auto;
+  justify-content: center;
+  background-color: white;
+}
+
+.view-switch img {
+  height: 24px;
+  aspect-ratio: 1/1;
+  align-self: center;
 }
 
 @media (min-width: 768px) {

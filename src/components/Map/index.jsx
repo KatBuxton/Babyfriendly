@@ -4,8 +4,6 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import ReactMapGL, { Marker, Popup, NavigationControl } from 'react-map-gl';
 import pinUrl from '../../img/pin.svg';
 import data from '../../data.js';
-import { Placeholder } from 'react-bootstrap';
-
 
 export const Map = () => {
   const [viewport, setViewport] = useState({
@@ -13,13 +11,12 @@ export const Map = () => {
     longitude: 14.42991,
     zoom: 15,
   })
-  const [popupOpen, setPopupOpen] = useState(false)
+  const [selectedLocation, setSelectedLocation] = useState(null)
 
   const navControlStyle = {
     right: 10,
-    top: 10
+    bottom: 10
   }
-
   return (
     <div className="map">
       <ReactMapGL
@@ -57,22 +54,47 @@ export const Map = () => {
             offsetTop={-50}
             key={place.index}>
             <button className="marker-button"
-              onClick={() => setPopupOpen(true)}>
+              onClick={() => setSelectedLocation(place)}>
               <img src={pinUrl} width={50} height={50} alt={place.name} />
             </button>
           </Marker>
         )}
-        {popupOpen &&
-          data.map((place) =>
-            <Popup
-              latitude={place.latitude}
-              longitude={place.longitude}
-              key={place.index}
-              offsetTop={-60}
-              onClose={() => setPopupOpen(false)}>
-              {place.name}
-            </Popup>
-          )
+        {selectedLocation &&
+          <Popup
+            latitude={selectedLocation.latitude}
+            longitude={selectedLocation.longitude}
+            key={selectedLocation.index}
+            offsetTop={-60}
+            onClose={() => setSelectedLocation(null)}>
+            <div className='popup'>
+              <div className="placeholder">
+              </div>
+              <div className="address">
+                {selectedLocation.address}
+              </div>
+              <div className="place-name">
+                {selectedLocation.name}
+              </div>
+              <div className="category-name">
+                {selectedLocation.categoryName}
+              </div>
+              {selectedLocation.changingStation === "true"
+                ? <div className="equipment">
+                  Přebalovací pult
+                </div>
+                : null}
+              {selectedLocation.mat === "true"
+                ? <div className="equipment">
+                  Čistý koberec/podložka
+                </div>
+                : null}
+              {selectedLocation.barrierFree === "true"
+                ? <div className="equipment">
+                  Bez bariér
+                </div>
+                : null}
+            </div>
+          </Popup>
         }
         <NavigationControl style={navControlStyle} showZoom={true} />
       </ReactMapGL>

@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 import "./style.css";
 
-export const ListItem = ({ name, address }) => {
+export const ListItem = ({ name, address, category }) => {
+
+  const styles = `${category} list-item`
 
   return (
-    <div className="list-item">
+    <div className={styles}>
       <div className="list-item__info">
-        <h2>{name}</h2>
-        <h3>{address}</h3>
+        <div className="list-item__name">{name}</div>
+        <div className="list-item__address">{address}</div>
       </div>
     </div>
   )

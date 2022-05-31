@@ -3,4 +3,11 @@
   flex-direction: column;
   margin: auto;
   column-gap: 10px;
+  height: 100vh;
+}
+
+@media (min-width: 768px) {
+.list {
+overflow-y: scroll
+}
 }

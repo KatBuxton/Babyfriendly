@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Amaranth&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -7,13 +9,37 @@ display: flex;
 flex-direction: column;
 }
 
+.map {
+  display: none;
+}
+
+.list-view-mobile-hidden .map  {
+  display: flex;
+}
+
+.list-view-mobile-hidden .list  {
+display: none;
+}
+
+
 @media (min-width: 768px) {
 
 .container {
   display: flex;
   flex-direction: row;
 }
+
+.container .map {
+  display: flex;
 }
+
+.container .list{
+  display: flex;
+}
+}
+
+
+
 /* ------------------------------- */
 
 .App {

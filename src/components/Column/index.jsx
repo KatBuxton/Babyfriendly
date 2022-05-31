@@ -8,9 +8,9 @@ export const Column = () => {
 
   return (
     <div className="column">
-      <Logo />
+      {/* <Logo />
       <ViewSwitch />
-      <List />
+      <List /> */}
     </div>
   )
 }

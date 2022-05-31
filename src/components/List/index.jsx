@@ -12,6 +12,7 @@ export const List = () => {
           name={place.name}
           address={place.address}
           key={place.index}
+          category={place.category}
         />)}
     </div>
   )
