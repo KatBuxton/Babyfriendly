@@ -46,3 +46,14 @@
   background-image: url("../../img/placeholders/restaurant.png");
 }
 
+.outdoors.list-item{
+  background-image: url("../../img/placeholders/outdoors.png");
+}
+
+.other.list-item{
+  background-image: url("../../img/placeholders/other.png");
+}
+
+.playroom.list-item.list-item{
+  background-image: url("../../img/placeholders/playroom.png");
+}

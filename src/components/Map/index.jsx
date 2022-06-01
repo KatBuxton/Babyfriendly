@@ -9,7 +9,7 @@ export const Map = () => {
   const [viewport, setViewport] = useState({
     latitude: 50.08854,
     longitude: 14.42991,
-    zoom: 15,
+    zoom: 13,
   })
   const [selectedLocation, setSelectedLocation] = useState(null)
 

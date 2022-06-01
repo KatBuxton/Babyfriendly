@@ -1,6 +1,7 @@
 .map {
   width: 100vw;
   height: 100vh;
+	overflow: hidden;
 }
 
 .marker-button {
@@ -18,6 +19,7 @@
   flex-direction: column;
   justify-content: center;
 	min-width: 300px;
+	text-align: center;
 }
 
 .address {

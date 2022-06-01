@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import mapIconUrl from '../../img/map.svg';
 import listIconUrl from '../../img/list.svg';
 import "./style.css";

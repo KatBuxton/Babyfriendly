@@ -1,3 +1,13 @@
+.filter-list{
+  display: none;
+}
+
+@media (min-width: 768px) {
+
+.filter-list{
+    display: flex;
+  }
+  
 label {
   display: block;
   position: relative;
@@ -36,5 +46,10 @@ label input:checked ~ .checkmark {
 ul{
   margin: auto;
   margin-bottom: 20px;
+  padding-inline-start: 0;
 }
 
+.group-name {
+  margin-bottom: 7px;
+}
+}

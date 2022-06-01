@@ -25,7 +25,6 @@ display: none;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 350px;
 }
 
 @media (min-width: 768px) {
@@ -45,5 +44,6 @@ display: none;
 
 .sidebar {
   overflow-y: scroll;
+  width: 350px;
 }
 }

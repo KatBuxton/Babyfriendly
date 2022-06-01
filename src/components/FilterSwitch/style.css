@@ -1,0 +1,29 @@
+.container {
+  position: relative;
+}
+
+.filter-switch{
+  position: absolute;
+  top: 80px;
+  right: 30px;
+  display: flex;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  height: 40px;
+  z-index: 1;
+  margin: auto;
+  justify-content: center;
+  background-color: white;
+}
+
+.filter-switch img {
+  height: 24px;
+  aspect-ratio: 1/1;
+  align-self: center;
+}
+
+@media (min-width: 768px) {
+  .filter-switch{
+    display: none;
+  }
+  }
