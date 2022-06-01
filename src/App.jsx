@@ -6,6 +6,7 @@ import { Map } from "./components/Map";
 import { Logo } from './components/Logo';
 import { ViewSwitch } from './components/ViewSwitch';
 import { List } from './components/List';
+import { Filters } from './components/Filters';
 
 function App() {
   const [listViewVisible, setListViewVisible] = useState(false)
@@ -18,6 +19,7 @@ function App() {
           <ViewSwitch
             listViewVisible={listViewVisible}
             setListViewVisible={setListViewVisible} />
+          <Filters />
           <List />
         </div>
         <Map />

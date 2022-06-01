@@ -1,0 +1,40 @@
+label {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  border: #00C4CC 2px solid;
+}
+
+label:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+label input:checked ~ .checkmark {
+  background-color: #00C4CC;
+}
+
+
+ul{
+  margin: auto;
+  margin-bottom: 20px;
+}
+
