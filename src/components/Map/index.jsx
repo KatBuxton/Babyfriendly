@@ -17,6 +17,7 @@ export const Map = () => {
     right: 10,
     bottom: 10
   }
+
   return (
     <div className="map">
       <ReactMapGL
@@ -67,7 +68,7 @@ export const Map = () => {
             offsetTop={-60}
             onClose={() => setSelectedLocation(null)}>
             <div className='popup'>
-              <div className="placeholder">
+              <div className={selectedLocation.category}>
               </div>
               <div className="address">
                 {selectedLocation.address}

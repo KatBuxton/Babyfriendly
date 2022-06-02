@@ -5,6 +5,10 @@ import data from '../../data.js';
 
 export const List = () => {
 
+  // const filterByCategory = () => {
+  //   if handleCheck 
+  // }
+
   return (
     <div className="list">
       {data.map((place) =>

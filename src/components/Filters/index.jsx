@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./style.css";
 import filters from './filters';
 
 export const Filters = () => {
+  const [handleCheck, setHandleCheck] = useState()
+
+
+
   return (
     <div className='filter-list'>
       <ul>
@@ -11,7 +15,7 @@ export const Filters = () => {
           return (
             <label className="filter-item">
               {c.text}
-              <input type="checkbox" />
+              <input type="checkbox" value={c.name} />
               <span className='checkmark' id={c.id}></span>
             </label>
           )
@@ -21,7 +25,7 @@ export const Filters = () => {
           return (
             <label className="filter-item">
               {c.text}
-              <input type="checkbox" />
+              <input type="checkbox" value={c.name} />
               <span className='checkmark' id={c.id}></span>
             </label>
           )
@@ -31,7 +35,7 @@ export const Filters = () => {
           return (
             <label className="filter-item">
               {c.text}
-              <input type="checkbox" />
+              <input type="checkbox" value={c.name} />
               <span className='checkmark' id={c.id}></span>
             </label>
           )

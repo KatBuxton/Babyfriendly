@@ -50,23 +50,64 @@
  margin-bottom: 20px;
 }
 
-.placeholder {
-	background-image: url("../../img/placeholders/restaurant.png");
+.equipment {
+	font-size: 0.7rem;
+	margin-bottom: 3px;
+}
+
+.babysitting{
+  background-image: url("../../img/placeholders/babysitting.png");
 	background-size: cover;
 	width: 100%;
 	aspect-ratio: 5 / 2;
 	margin-bottom: 5px;
 }
 
-.equipment {
-	font-size: 0.7rem;
-	margin-bottom: 3px;
+.cafe{
+  background-image: url("../../img/placeholders/cafe.png");
+	background-size: cover;
+	width: 100%;
+	aspect-ratio: 5 / 2;
+	margin-bottom: 5px;
 }
+
+.restaurant{
+  background-image: url("../../img/placeholders/restaurant.png");
+	background-size: cover;
+	width: 100%;
+	aspect-ratio: 5 / 2;
+	margin-bottom: 5px;
+}
+
+.outdoors{
+  background-image: url("../../img/placeholders/outdoors.png");
+	background-size: cover;
+	width: 100%;
+	aspect-ratio: 5 / 2;
+	margin-bottom: 5px;
+}
+
+.other{
+  background-image: url("../../img/placeholders/other.png");
+	background-size: cover;
+	width: 100%;
+	aspect-ratio: 5 / 2;
+	margin-bottom: 5px;
+}
+
+.playroom{
+  background-image: url("../../img/placeholders/playroom.png");
+	background-size: cover;
+	width: 100%;
+	aspect-ratio: 5 / 2;
+	margin-bottom: 5px;
+}
+
 
 @media (min-width: 768px) {
 
 .map {
-	width: 100% ;
+	flex: 1;
   height: 100vh;
 	overflow: hidden;
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 import "./style.css";
 
-export const ListItem = ({ name, address, category }) => {
+export const ListItem = ({ name, address, category, selectedLocation }) => {
 
   const styles = `${category} list-item`
 
