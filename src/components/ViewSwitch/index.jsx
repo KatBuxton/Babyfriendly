@@ -7,7 +7,7 @@ import "./style.css";
 export const ViewSwitch = ({ listViewVisible, setListViewVisible }) => {
 
   return (
-    <div className='container'>
+    <div className='wrapper-ws'>
       <div className="view-switch"
         onClick={() => setListViewVisible(!listViewVisible)}
       >

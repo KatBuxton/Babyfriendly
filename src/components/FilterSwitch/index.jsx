@@ -5,7 +5,7 @@ import "./style.css";
 export const FilterSwitch = ({ filtersVisible, setFiltersVisible }) => {
 
   return (
-    <div className='container'>
+    <div className='wrapper-fs'>
       <div className="filter-switch"
         onClick={() => setFiltersVisible(true)}
       >
