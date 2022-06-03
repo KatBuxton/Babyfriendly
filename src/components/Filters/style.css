@@ -2,12 +2,6 @@
   display: none;
 }
 
-@media (min-width: 768px) {
-
-.filter-list{
-    display: flex;
-  }
-  
 label {
   display: block;
   position: relative;
@@ -42,7 +36,6 @@ label input:checked ~ .checkmark {
   background-color: #00C4CC;
 }
 
-
 ul{
   margin: auto;
   margin-bottom: 20px;
@@ -52,4 +45,42 @@ ul{
 .group-name {
   margin-bottom: 7px;
 }
+
+.mobile-filters .filter-list{
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 100px;
+}
+
+.btn-filters {
+  margin-top: 30px;
+  border-radius: 5px;
+  background-color: #E0C9FF;
+  color: #7C2AE8;
+  font-family: "Amaranth", sans-serif;
+  border: none;
+  padding:8px 32px;
+  cursor:pointer;
+}
+
+.btn-filters:hover {
+  background-color: #C599FF;
+}
+
+.btn-filters:active {
+  position:relative;
+	top:1px;
+}
+
+@media (min-width: 768px) {
+
+.filter-list{
+    display: flex;
+  }
+
+.btn-filters{
+  display: none;
+}
+
 }

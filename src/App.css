@@ -27,6 +27,16 @@ display: none;
   flex-direction: column;
 } 
 
+.mobile-filters .filter-list{
+display: flex;
+}
+
+.mobile-filters .list, 
+.mobile-filters .map,
+.mobile-filters .view-switch {
+  display: none;
+}
+
 @media (min-width: 768px) {
 
 .container {

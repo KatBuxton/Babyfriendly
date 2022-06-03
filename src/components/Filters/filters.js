@@ -32,7 +32,7 @@ const filters = [
         text: "Jiné vhodné místo"
       },
     ],
-    "weather": [
+    weather: [
       {
         id: "7",
         name: "indoors",
@@ -44,7 +44,7 @@ const filters = [
         text: "Chci být venku"
       },
     ],
-    "equipment": [
+    equipment: [
       {
         id: "9",
         name: "changing-station",
@@ -61,7 +61,7 @@ const filters = [
         text: "Bez bariér"
       },
     ],
-    "price": [
+    price: [
       {
         id: "12",
         name: "free",

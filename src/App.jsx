@@ -13,9 +13,23 @@ function App() {
   const [listViewVisible, setListViewVisible] = useState(false)
   const [filtersVisible, setFiltersVisible] = useState(false)
 
+  let mobileView = ""
+  if (filtersVisible === true) {
+    mobileView = "container mobile-filters"
+  } else if (filtersVisible === false && listViewVisible === false) {
+    mobileView = "container list-view-mobile-hidden"
+  } else {
+    mobileView = "container"
+  }
+
+  // {
+  //   listViewVisible === true
+  //     ? "container"
+  //     : "container list-view-mobile-hidden"}
+
   return (
     <div className="App">
-      <div className={listViewVisible === true ? "container" : "container list-view-mobile-hidden"}>
+      <div className={mobileView}>
         <div className='sidebar'>
           <Logo />
           <FilterSwitch
