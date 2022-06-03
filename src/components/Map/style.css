@@ -55,7 +55,7 @@
 	margin-bottom: 3px;
 }
 
-.babysitting{
+.popup .babysitting{
   background-image: url("../../img/placeholders/babysitting.png");
 	background-size: cover;
 	width: 100%;
@@ -63,7 +63,7 @@
 	margin-bottom: 5px;
 }
 
-.cafe{
+.popup .cafe{
   background-image: url("../../img/placeholders/cafe.png");
 	background-size: cover;
 	width: 100%;
@@ -71,7 +71,7 @@
 	margin-bottom: 5px;
 }
 
-.restaurant{
+.popup .restaurant{
   background-image: url("../../img/placeholders/restaurant.png");
 	background-size: cover;
 	width: 100%;
@@ -79,7 +79,7 @@
 	margin-bottom: 5px;
 }
 
-.outdoors{
+.popup .outdoors{
   background-image: url("../../img/placeholders/outdoors.png");
 	background-size: cover;
 	width: 100%;
@@ -87,7 +87,7 @@
 	margin-bottom: 5px;
 }
 
-.other{
+.popup .other{
   background-image: url("../../img/placeholders/other.png");
 	background-size: cover;
 	width: 100%;
@@ -95,7 +95,7 @@
 	margin-bottom: 5px;
 }
 
-.playroom{
+.popup .playroom{
   background-image: url("../../img/placeholders/playroom.png");
 	background-size: cover;
 	width: 100%;

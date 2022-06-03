@@ -4,15 +4,13 @@
   background-image: url("../../img/placeholders/restaurant.png");
   background-size: cover;
   min-height: 170px;
+  width: 100%;
   display: flex;
   align-items: flex-end;
   border-radius: 10px;
-  aspect-ratio: 3.5 /2;
-  margin: auto;
   margin-bottom: 10px;
   box-shadow: 2px 2px 2px 0px #dfdfdf;
 }
-
 
 .list-item__info {
   color: black;
@@ -54,6 +52,6 @@
   background-image: url("../../img/placeholders/other.png");
 }
 
-.playroom.list-item.list-item{
+.playroom.list-item{
   background-image: url("../../img/placeholders/playroom.png");
 }

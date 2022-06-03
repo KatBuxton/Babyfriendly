@@ -25,10 +25,6 @@ display: none;
 .sidebar{
   display: flex;
   flex-direction: column;
-}
-
-.purple {
-  filter: invert(57%) sepia(100%) saturate(7499%) hue-rotate(260deg) brightness(90%) contrast(102%);
 } 
 
 @media (min-width: 768px) {

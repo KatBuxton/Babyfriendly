@@ -1,7 +1,12 @@
 .list {
   flex-direction: column;
   margin: auto;
-  column-gap: 10px;
   height: 100vh;
-  width: 350px;
+  width: 80vw;
+}
+
+@media (min-width: 768px) {
+  .list {
+    width: 350px;
+  }
 }

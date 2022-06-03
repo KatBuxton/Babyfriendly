@@ -3,7 +3,7 @@ import "./style.css";
 import { ListItem } from '../ListItem';
 import data from '../../data.js';
 
-export const List = () => {
+export const List = (selectedLocation, setSelectedLocation) => {
 
   // const filterByCategory = () => {
   //   if handleCheck 
@@ -17,6 +17,7 @@ export const List = () => {
           address={place.address}
           key={place.index}
           category={place.category}
+          onClick={() => setSelectedLocation(place)}
         />)}
     </div>
   )
