@@ -3,11 +3,15 @@ import "./style.css";
 import { ListItem } from '../ListItem';
 import data from '../../data.js';
 
-export const List = (selectedLocation, setSelectedLocation) => {
+export const List = ({ selectedLocation, setSelectedLocation }) => {
 
   // const filterByCategory = () => {
   //   if handleCheck 
   // }
+
+  const handleClick = (place) => {
+    setSelectedLocation(place)
+  }
 
   return (
     <div className="list">
@@ -17,8 +21,9 @@ export const List = (selectedLocation, setSelectedLocation) => {
           address={place.address}
           key={place.index}
           category={place.category}
-          onClick={() => setSelectedLocation(place)}
+          handleClick={() => handleClick(place)}
         />)}
     </div>
   )
 }
+

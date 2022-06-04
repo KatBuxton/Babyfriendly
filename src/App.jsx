@@ -12,6 +12,7 @@ import { FilterSwitch } from './components/FilterSwitch';
 function App() {
   const [listViewVisible, setListViewVisible] = useState(false)
   const [filtersVisible, setFiltersVisible] = useState(false)
+  const [selectedLocation, setSelectedLocation] = useState(null)
 
   let mobileView = ""
   if (filtersVisible === true) {
@@ -39,9 +40,13 @@ function App() {
             listViewVisible={listViewVisible}
             setListViewVisible={setListViewVisible} />
           <Filters />
-          <List />
+          <List
+            setSelectedLocation={setSelectedLocation}
+          />
         </div>
-        <Map />
+        <Map
+          selectedLocation={selectedLocation}
+          setSelectedLocation={setSelectedLocation} />
       </div>
     </div>
   );

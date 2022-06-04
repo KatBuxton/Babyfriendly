@@ -5,18 +5,20 @@ import ReactMapGL, { Marker, Popup, NavigationControl } from 'react-map-gl';
 import pinUrl from '../../img/pin.svg';
 import data from '../../data.js';
 
-export const Map = () => {
-  const [viewport, setViewport] = useState({
-    latitude: 50.08854,
-    longitude: 14.42991,
-    zoom: 13,
-  })
-  const [selectedLocation, setSelectedLocation] = useState(null)
+const initialCoords = {
+  latitude: 50.08854,
+  longitude: 14.42991,
+  zoom: 13
+}
+
+export const Map = ({ selectedLocation, setSelectedLocation }) => {
+  const [viewport, setViewport] = useState(initialCoords)
 
   const navControlStyle = {
     right: 10,
     bottom: 10
   }
+  console.log(viewport)
 
   return (
     <div className="map">
