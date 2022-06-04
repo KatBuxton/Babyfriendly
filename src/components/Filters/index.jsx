@@ -4,8 +4,7 @@ import filters from './filters';
 import { FilterItem } from '../FilterItem';
 
 
-export const Filters = ({ selectedFilters, setSelectedFilters, setFiltersVisible }) => {
-  console.log("mounted")
+export const Filters = ({ selectedFilters, setSelectedFilters, setFiltersVisible, filteredItems }) => {
 
 
   const handleChange = (isChecked, item) => {
@@ -17,7 +16,6 @@ export const Filters = ({ selectedFilters, setSelectedFilters, setFiltersVisible
       setSelectedFilters((prevState) => prevState.filter(name => name !== item.name))
     }
   }
-  console.log(selectedFilters)
 
   return (
     <div className='filter-list'>
@@ -59,8 +57,9 @@ export const Filters = ({ selectedFilters, setSelectedFilters, setFiltersVisible
             handleChange={(isChecked) => handleChange(isChecked, item)} />
         )}
       </ul>
+      <div className={filteredItems.length === 0 ? "filter-error" : "filter-error-hidden"}>Zkus upravit filtry</div>
       <button
-        className="btn-filters"
+        className={filteredItems.length === 0 ? "btn-filters btn-disabled" : "btn-filters"}
         onClick={() => setFiltersVisible(false)}>
         Aplikovat filtry</button>
     </div>

@@ -13,7 +13,7 @@ const data = [
     changingStation: false,
     mat: true,
     barrierFree: true,
-    filters: ["cafe", "mat", "barrier-free"]
+    filters: ["mat", "barrier-free"]
   },
   {
     index: "#2",
@@ -29,7 +29,7 @@ const data = [
     changingStation: false,
     mat: true,
     barrierFree: false,
-    filters: ["cafe", "mat"]
+    filters: ["mat"]
   },
   {
     index: "#3",
@@ -45,7 +45,7 @@ const data = [
     changingStation: false,
     mat: false,
     barrierFree: true,
-    filters: ["outdoors", "barrier-free"]
+    filters: ["barrier-free"]
 
   },
   {
@@ -62,7 +62,7 @@ const data = [
     changingStation: true,
     mat: true,
     barrierFree: true,
-    filters: ["restaurant", "mat", "barrier-free", "changing-station"]
+    filters: ["mat", "barrier-free", "changing-station"]
   },
   {
     index: "#5",
@@ -78,7 +78,7 @@ const data = [
     changingStation: true,
     mat: true,
     barrierFree: false,
-    filters: ["cafe", "mat", "changing-station"]
+    filters: ["mat", "changing-station"]
   },
   {
     index: "#6",
@@ -94,7 +94,7 @@ const data = [
     changingStation: true,
     mat: false,
     barrierFree: true,
-    filters: ["cafe", "barrier-free", "changing-station"]
+    filters: ["barrier-free", "changing-station"]
   },
   {
     index: "#7",
@@ -110,7 +110,7 @@ const data = [
     changingStation: true,
     mat: false,
     barrierFree: true,
-    filters: ["outdoors", "barrier-free", "changing-station"]
+    filters: ["barrier-free", "changing-station"]
   },
   {
     index: "#8",
@@ -126,7 +126,7 @@ const data = [
     changingStation: true,
     mat: true,
     barrierFree: false,
-    filters: ["cafe", "mat", "changing-station"]
+    filters: ["mat", "changing-station"]
   },
   {
     index: "#9",
@@ -142,7 +142,7 @@ const data = [
     changingStation: true,
     mat: true,
     barrierFree: false,
-    filters: ["playroom", "mat", "changing-station"]
+    filters: ["mat", "changing-station"]
   },
   {
     index: "#10",

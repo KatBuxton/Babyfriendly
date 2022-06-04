@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import "./style.css";
 import 'mapbox-gl/dist/mapbox-gl.css';
-import ReactMapGL, { Marker, Popup, NavigationControl } from 'react-map-gl';
+import ReactMapGL, { Marker, Popup, NavigationControl, FlyToInterpolator } from 'react-map-gl';
 import pinUrl from '../../img/pin.svg';
 import data from '../../data.js';
 
@@ -14,12 +14,35 @@ const initialCoords = {
 export const Map = ({ selectedLocation, filteredItems, setSelectedLocation }) => {
   const [viewport, setViewport] = useState(initialCoords)
 
+  const notInitialRender = useRef(false)
+
   useEffect(() => {
+
+    if (notInitialRender.current) {
+      if (filteredItems.length > 0) {
+        setViewport({
+          latitude: filteredItems[0].latitude,
+          longitude: filteredItems[0].longitude,
+          zoom: 13,
+          transitionDuration: "auto",
+          transitionInterpolator: new FlyToInterpolator(),
+        });
+      }
+    }
+    else {
+      notInitialRender.current = true
+    }
+  }, [filteredItems]);
+
+  useEffect(() => {
+    console.log(selectedLocation)
     if (selectedLocation) {
       setViewport({
         latitude: selectedLocation.latitude,
         longitude: selectedLocation.longitude,
-        zoom: 13
+        zoom: 13,
+        transitionDuration: "auto",
+        transitionInterpolator: new FlyToInterpolator(),
       });
     }
   }, [selectedLocation]);

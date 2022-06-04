@@ -12,6 +12,11 @@
   box-shadow: 2px 2px 2px 0px #dfdfdf;
 }
 
+.list-item:active {
+  position:relative;
+	top:1px;
+}
+
 .list-item__info {
   color: black;
   font-family: 'Open Sans', sans-serif;

@@ -64,6 +64,10 @@ ul{
   cursor:pointer;
 }
 
+.btn-filters.btn-disabled{
+  background-color: #ccc;
+}
+
 .btn-filters:hover {
   background-color: #C599FF;
 }
@@ -85,5 +89,12 @@ ul{
     display:none;
   }
 
+  .filter-error{
+    display: flex;
+  }
+  
+  .filter-error-hidden{
+    display: none;
+  }
 
 }

@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import "./style.css";
 import { ListItem } from '../ListItem';
 
-export const List = ({ filteredItems, setSelectedLocation }) => {
+export const List = ({ filteredItems, setSelectedLocation, setListViewVisible }) => {
 
   const handleClick = (place) => {
     setSelectedLocation(place)
+    setListViewVisible(false)
   }
 
   return (

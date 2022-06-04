@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import { Column } from './components/Column';
 // import { MapSection } from './components/MapSection';
@@ -16,7 +16,7 @@ function App() {
   const [filtersVisible, setFiltersVisible] = useState(false)
   const [selectedLocation, setSelectedLocation] = useState(null)
   const [selectedFilters, setSelectedFilters] = useState([]);
-
+  const [filteredItems, setFilteredItems] = useState(data)
 
   let mobileView = ""
   if (filtersVisible === true) {
@@ -27,18 +27,34 @@ function App() {
     mobileView = "container"
   }
 
-  const filteredItems = data.filter((place) => {
-    if (selectedFilters.length === 0) {
-      return true
-    }
-    const containsAll = selectedFilters.every(filter => {
-      return place.filters.includes(filter);
-    });
-    return containsAll
-  })
+  // const filteredItems = data.filter((place) => {
+  //   if (selectedFilters.length === 0) {
+  //     return true
+  //   }
+  //   place.filters.forEach((filter) => selectedFilters.includes(filter))
+  // })
+  useEffect(() => {
+    const newItems = selectedFilters.length === 0 ? data : data.filter((place) => {
+
+      const placesCategory = ["cafe", "restaurant", "outdoors", "playroom", "babysitting", "other"]
+      const categorySelected = selectedFilters.some(filter => placesCategory.includes(filter));
+      const placeType = categorySelected ? selectedFilters.includes(place.category) : true;
+
+      // const filteredSelectedItems = selectedFilters.filter(filter => filter !== "cafe" && filter !== "restaurant" && filter !== "outdoors" && filter !== "playroom" && filter !== "babysitting" && filter !== "other")
+      const filteredSelectedItems = selectedFilters.filter(filter => !placesCategory.includes(filter))
+      const containsAll = filteredSelectedItems.every(filter => {
+        return place.filters.includes(filter);
+      });
+      if (placeType && containsAll) {
+        return true;
+      }
+      return false;
+    })
+    setFilteredItems(newItems)
+  }, [selectedFilters]);
 
 
-  console.log(filteredItems)
+
 
   return (
     <div className="App">
@@ -54,10 +70,12 @@ function App() {
           <Filters
             selectedFilters={selectedFilters}
             setSelectedFilters={setSelectedFilters}
-            setFiltersVisible={setFiltersVisible} />
+            setFiltersVisible={setFiltersVisible}
+            filteredItems={filteredItems} />
           <List
             setSelectedLocation={setSelectedLocation}
             filteredItems={filteredItems}
+            setListViewVisible={setListViewVisible}
           />
         </div>
         <Map
