@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "./style.css";
 import 'mapbox-gl/dist/mapbox-gl.css';
 import ReactMapGL, { Marker, Popup, NavigationControl } from 'react-map-gl';
@@ -14,11 +14,20 @@ const initialCoords = {
 export const Map = ({ selectedLocation, setSelectedLocation }) => {
   const [viewport, setViewport] = useState(initialCoords)
 
+  useEffect(() => {
+    if (selectedLocation) {
+      setViewport({
+        latitude: selectedLocation.latitude,
+        longitude: selectedLocation.longitude,
+        zoom: 13
+      });
+    }
+  }, [selectedLocation]);
+
   const navControlStyle = {
     right: 10,
     bottom: 10
   }
-  console.log(viewport)
 
   return (
     <div className="map">

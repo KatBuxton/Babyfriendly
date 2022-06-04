@@ -17,7 +17,7 @@ export const Filters = () => {
               <label className="filter-item">
                 {c.text}
                 <input type="checkbox" value={c.name} />
-                <span className='checkmark' id={c.id}></span>
+                <span className='checkmark' key={c.id}></span>
               </label>
             )
           })}
@@ -27,7 +27,7 @@ export const Filters = () => {
               <label className="filter-item">
                 {c.text}
                 <input type="checkbox" value={c.name} />
-                <span className='checkmark' id={c.id}></span>
+                <span className='checkmark' key={c.id}></span>
               </label>
             )
           })}
@@ -37,7 +37,7 @@ export const Filters = () => {
               <label className="filter-item">
                 {c.text}
                 <input type="checkbox" value={c.name} />
-                <span className='checkmark' id={c.id}></span>
+                <span className='checkmark' key={c.id}></span>
               </label>
             )
           })}
@@ -47,7 +47,7 @@ export const Filters = () => {
               <label className="filter-item">
                 {c.text}
                 <input type="checkbox" value={c.name} />
-                <span className='checkmark' id={c.id}></span>
+                <span className='checkmark' key={c.id}></span>
               </label>
             )
           })}
