@@ -8,11 +8,15 @@ import { ViewSwitch } from './components/ViewSwitch';
 import { List } from './components/List';
 import { Filters } from './components/Filters';
 import { FilterSwitch } from './components/FilterSwitch';
+import data from './data.js';
+
 
 function App() {
   const [listViewVisible, setListViewVisible] = useState(false)
   const [filtersVisible, setFiltersVisible] = useState(false)
   const [selectedLocation, setSelectedLocation] = useState(null)
+  const [selectedFilters, setSelectedFilters] = useState([]);
+
 
   let mobileView = ""
   if (filtersVisible === true) {
@@ -22,6 +26,17 @@ function App() {
   } else {
     mobileView = "container"
   }
+
+  const filteredItems = data.filter((place) => {
+    if (selectedFilters.length === 0) {
+      return true
+    }
+    return selectedFilters.includes(place.category)
+  })
+
+
+  console.log("pizza")
+
 
   // {
   //   listViewVisible === true
@@ -39,14 +54,19 @@ function App() {
           <ViewSwitch
             listViewVisible={listViewVisible}
             setListViewVisible={setListViewVisible} />
-          <Filters />
+          <Filters
+            selectedFilters={selectedFilters}
+            setSelectedFilters={setSelectedFilters}
+            setFiltersVisible={setFiltersVisible} />
           <List
             setSelectedLocation={setSelectedLocation}
+            filteredItems={filteredItems}
           />
         </div>
         <Map
           selectedLocation={selectedLocation}
-          setSelectedLocation={setSelectedLocation} />
+          setSelectedLocation={setSelectedLocation}
+          filteredItems={filteredItems} />
       </div>
     </div>
   );

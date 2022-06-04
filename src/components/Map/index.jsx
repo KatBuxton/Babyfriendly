@@ -11,7 +11,7 @@ const initialCoords = {
   zoom: 13
 }
 
-export const Map = ({ selectedLocation, setSelectedLocation }) => {
+export const Map = ({ selectedLocation, filteredItems, setSelectedLocation }) => {
   const [viewport, setViewport] = useState(initialCoords)
 
   useEffect(() => {
@@ -58,7 +58,7 @@ export const Map = ({ selectedLocation, setSelectedLocation }) => {
           ],
         }}
       >
-        {data.map((place) =>
+        {filteredItems.map((place) =>
           <Marker
             latitude={place.latitude}
             longitude={place.longitude}

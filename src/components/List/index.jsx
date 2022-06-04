@@ -1,13 +1,8 @@
 import React, { useState } from 'react';
 import "./style.css";
 import { ListItem } from '../ListItem';
-import data from '../../data.js';
 
-export const List = ({ selectedLocation, setSelectedLocation }) => {
-
-  // const filterByCategory = () => {
-  //   if handleCheck 
-  // }
+export const List = ({ filteredItems, setSelectedLocation }) => {
 
   const handleClick = (place) => {
     setSelectedLocation(place)
@@ -15,7 +10,7 @@ export const List = ({ selectedLocation, setSelectedLocation }) => {
 
   return (
     <div className="list">
-      {data.map((place) =>
+      {filteredItems.map((place) =>
         <ListItem
           name={place.name}
           address={place.address}

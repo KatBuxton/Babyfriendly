@@ -10,9 +10,9 @@ const data = [
     instagram: "@cheesecake.time",
     facebook: null,
     web: null,
-    changingStation: "false",
-    mat: "true",
-    barrierFree: "true"
+    changingStation: false,
+    mat: true,
+    barrierFree: true
   },
   {
     index: "#2",
@@ -25,9 +25,9 @@ const data = [
     instagram: "@kavarna.hlina",
     facebook: null,
     web: null,
-    changingStation: "false",
-    mat: "true",
-    barrierFree: "false"
+    changingStation: false,
+    mat: true,
+    barrierFree: false
   },
   {
     index: "#3",
@@ -40,9 +40,9 @@ const data = [
     instagram: "@blockuhrineves",
     facebook: null,
     web: null,
-    changingStation: "false",
-    mat: "false",
-    barrierFree: "true",
+    changingStation: false,
+    mat: false,
+    barrierFree: true,
   },
   {
     index: "#4",
@@ -55,9 +55,9 @@ const data = [
     instagram: "@pizza_nuova",
     facebook: null,
     web: null,
-    changingStation: "true",
-    mat: "true",
-    barrierFree: "true"
+    changingStation: true,
+    mat: true,
+    barrierFree: true
   },
   {
     index: "#5",
@@ -70,9 +70,9 @@ const data = [
     instagram: "@cacaoprague",
     facebook: null,
     web: null,
-    changingStation: "true",
-    mat: "true",
-    barrierFree: "false"
+    changingStation: true,
+    mat: true,
+    barrierFree: false
   },
   {
     index: "#6",
@@ -85,9 +85,9 @@ const data = [
     instagram: null,
     facebook: null,
     web: "https://www.zrnozrnko.cz/nusle/",
-    changingStation: "true",
-    mat: "false",
-    barrierFree: "true"
+    changingStation: true,
+    mat: false,
+    barrierFree: true
   },
   {
     index: "#7",
@@ -100,9 +100,9 @@ const data = [
     instagram: "@ricanskypivovar",
     facebook: null,
     web: null,
-    changingStation: "true",
-    mat: "false",
-    barrierFree: "true"
+    changingStation: true,
+    mat: false,
+    barrierFree: true
   },
   {
     index: "#8",
@@ -115,9 +115,9 @@ const data = [
     instagram: null,
     facebook: null,
     web: "https://www.bazenjulis.cz/",
-    changingStation: "true",
-    mat: "true",
-    barrierFree: "false"
+    changingStation: true,
+    mat: true,
+    barrierFree: false
   },
   {
     index: "#9",
@@ -130,9 +130,9 @@ const data = [
     instagram: null,
     facebook: "https://www.facebook.com/Chaloupkaherna/",
     web: null,
-    changingStation: "true",
-    mat: "true",
-    barrierFree: "false"
+    changingStation: true,
+    mat: true,
+    barrierFree: false
   },
   {
     index: "#10",
@@ -145,9 +145,9 @@ const data = [
     instagram: null,
     facebook: "https://www.facebook.com/usplavu",
     web: null,
-    changingStation: "false",
-    mat: "false",
-    barrierFree: "false"
+    changingStation: false,
+    mat: false,
+    barrierFree: false
   }
 ]
 
