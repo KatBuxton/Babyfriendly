@@ -12,7 +12,8 @@ const data = [
     web: null,
     changingStation: false,
     mat: true,
-    barrierFree: true
+    barrierFree: true,
+    filters: ["cafe", "mat", "barrier-free"]
   },
   {
     index: "#2",
@@ -27,7 +28,8 @@ const data = [
     web: null,
     changingStation: false,
     mat: true,
-    barrierFree: false
+    barrierFree: false,
+    filters: ["cafe", "mat"]
   },
   {
     index: "#3",
@@ -43,6 +45,8 @@ const data = [
     changingStation: false,
     mat: false,
     barrierFree: true,
+    filters: ["outdoors", "barrier-free"]
+
   },
   {
     index: "#4",
@@ -57,7 +61,8 @@ const data = [
     web: null,
     changingStation: true,
     mat: true,
-    barrierFree: true
+    barrierFree: true,
+    filters: ["restaurant", "mat", "barrier-free", "changing-station"]
   },
   {
     index: "#5",
@@ -72,7 +77,8 @@ const data = [
     web: null,
     changingStation: true,
     mat: true,
-    barrierFree: false
+    barrierFree: false,
+    filters: ["cafe", "mat", "changing-station"]
   },
   {
     index: "#6",
@@ -87,7 +93,8 @@ const data = [
     web: "https://www.zrnozrnko.cz/nusle/",
     changingStation: true,
     mat: false,
-    barrierFree: true
+    barrierFree: true,
+    filters: ["cafe", "barrier-free", "changing-station"]
   },
   {
     index: "#7",
@@ -102,7 +109,8 @@ const data = [
     web: null,
     changingStation: true,
     mat: false,
-    barrierFree: true
+    barrierFree: true,
+    filters: ["outdoors", "barrier-free", "changing-station"]
   },
   {
     index: "#8",
@@ -117,7 +125,8 @@ const data = [
     web: "https://www.bazenjulis.cz/",
     changingStation: true,
     mat: true,
-    barrierFree: false
+    barrierFree: false,
+    filters: ["cafe", "mat", "changing-station"]
   },
   {
     index: "#9",
@@ -132,7 +141,8 @@ const data = [
     web: null,
     changingStation: true,
     mat: true,
-    barrierFree: false
+    barrierFree: false,
+    filters: ["playroom", "mat", "changing-station"]
   },
   {
     index: "#10",
@@ -147,7 +157,8 @@ const data = [
     web: null,
     changingStation: false,
     mat: false,
-    barrierFree: false
+    barrierFree: false,
+    filters: ["outdoors"]
   }
 ]
 

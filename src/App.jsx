@@ -31,17 +31,14 @@ function App() {
     if (selectedFilters.length === 0) {
       return true
     }
-    return selectedFilters.includes(place.category)
+    const containsAll = selectedFilters.every(filter => {
+      return place.filters.includes(filter);
+    });
+    return containsAll
   })
 
 
-  console.log("pizza")
-
-
-  // {
-  //   listViewVisible === true
-  //     ? "container"
-  //     : "container list-view-mobile-hidden"}
+  console.log(filteredItems)
 
   return (
     <div className="App">

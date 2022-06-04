@@ -90,17 +90,17 @@ export const Map = ({ selectedLocation, filteredItems, setSelectedLocation }) =>
               <div className="category-name">
                 {selectedLocation.categoryName}
               </div>
-              {selectedLocation.changingStation === "true"
+              {selectedLocation.changingStation === true
                 ? <div className="equipment">
                   Přebalovací pult
                 </div>
                 : null}
-              {selectedLocation.mat === "true"
+              {selectedLocation.mat === true
                 ? <div className="equipment">
                   Čistý koberec/podložka
                 </div>
                 : null}
-              {selectedLocation.barrierFree === "true"
+              {selectedLocation.barrierFree === true
                 ? <div className="equipment">
                   Bez bariér
                 </div>
