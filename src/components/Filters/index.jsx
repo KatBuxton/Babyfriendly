@@ -1,59 +1,47 @@
 import React, { useState } from 'react';
-import "./style.css";
 import filters from './filters';
+import { FilterItem } from '../FilterItem';
 
 export const Filters = () => {
-  const [handleCheck, setHandleCheck] = useState()
-
-
+  const [selectedFilters, setSelectedFilters] = useState([]);
 
   return (
-    <>
-      <div className='filter-list'>
-        <ul>
-          <div className="group-name">Typ místa</div>
-          {filters[0].category.map((c) => {
-            return (
-              <label className="filter-item">
-                {c.text}
-                <input type="checkbox" value={c.name} />
-                <span className='checkmark' key={c.id}></span>
-              </label>
-            )
-          })}
-          <div className="group-name">Vybavení</div>
-          {filters[0].equipment.map((c) => {
-            return (
-              <label className="filter-item">
-                {c.text}
-                <input type="checkbox" value={c.name} />
-                <span className='checkmark' key={c.id}></span>
-              </label>
-            )
-          })}
-          <div className="group-name">Cena</div>
-          {filters[0].price.map((c) => {
-            return (
-              <label className="filter-item">
-                {c.text}
-                <input type="checkbox" value={c.name} />
-                <span className='checkmark' key={c.id}></span>
-              </label>
-            )
-          })}
-          <div className="group-name">Podle počasí</div>
-          {filters[0].weather.map((c) => {
-            return (
-              <label className="filter-item">
-                {c.text}
-                <input type="checkbox" value={c.name} />
-                <span className='checkmark' key={c.id}></span>
-              </label>
-            )
-          })}
-        </ul>
-        <button className="btn-filters">Aplikovat filtry</button>
-      </div>
-    </>
+    <div className='filter-list'>
+      <ul>
+        <div className="group-name">Typ místa</div>
+        {filters.category.map((item) =>
+          <FilterItem
+            name={item.name}
+            text={item.text}
+            id={item.id}
+            key={item.id} />
+        )}
+        <div className="group-name">Vybavení</div>
+        {filters.equipment.map((item) =>
+          <FilterItem
+            name={item.name}
+            text={item.text}
+            id={item.id}
+            key={item.id} />
+        )}
+        <div className="group-name">Cena</div>
+        {filters.price.map((item) =>
+          <FilterItem
+            name={item.name}
+            text={item.text}
+            id={item.id}
+            key={item.id} />
+        )}
+        <div className="group-name">Podle počasí</div>
+        {filters.weather.map((item) =>
+          <FilterItem
+            name={item.name}
+            text={item.text}
+            id={item.id}
+            key={item.id} />
+        )}
+      </ul>
+      <button className="btn-filters">Aplikovat filtry</button>
+    </div>
   )
 }

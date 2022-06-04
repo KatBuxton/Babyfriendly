@@ -12,7 +12,7 @@ const data = [
     web: null,
     changingStation: "false",
     mat: "true",
-    barrierFree: "true"
+    barrierFree: "true",
   },
   {
     index: "#2",
