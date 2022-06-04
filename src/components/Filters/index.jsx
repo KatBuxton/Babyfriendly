@@ -2,8 +2,22 @@ import React, { useState } from 'react';
 import filters from './filters';
 import { FilterItem } from '../FilterItem';
 
+
 export const Filters = () => {
+  console.log("mounted")
+
   const [selectedFilters, setSelectedFilters] = useState([]);
+
+  const handleChange = (isChecked, item) => {
+    if (isChecked) {
+      setSelectedFilters(prevState =>
+        [...prevState, item.id]
+      );
+    } else {
+      setSelectedFilters((prevState) => prevState.filter(id => id !== item.id))
+    }
+  }
+  console.log(selectedFilters)
 
   return (
     <div className='filter-list'>
@@ -14,7 +28,8 @@ export const Filters = () => {
             name={item.name}
             text={item.text}
             id={item.id}
-            key={item.id} />
+            key={item.id}
+            handleChange={(isChecked) => handleChange(isChecked, item)} />
         )}
         <div className="group-name">Vybavení</div>
         {filters.equipment.map((item) =>

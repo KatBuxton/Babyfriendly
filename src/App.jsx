@@ -23,6 +23,9 @@ function App() {
     mobileView = "container"
   }
 
+  console.log("pizza")
+
+
   // {
   //   listViewVisible === true
   //     ? "container"
