@@ -9,6 +9,7 @@ import { List } from './components/List';
 import { Filters } from './components/Filters';
 import { FilterSwitch } from './components/FilterSwitch';
 import data from './data.js';
+import { SearchBar } from './components/SearchBar';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
   const [selectedLocation, setSelectedLocation] = useState(null)
   const [selectedFilters, setSelectedFilters] = useState([]);
   const [filteredItems, setFilteredItems] = useState(data)
+  const [searchBarActive, setSearchBarActive] = useState(false)
 
   let mobileView = ""
   if (filtersVisible === true) {
@@ -26,6 +28,12 @@ function App() {
   } else {
     mobileView = "container"
   }
+
+  console.log(mobileView, "mobileView")
+  console.log(filtersVisible, "filtersVisible")
+  console.log(listViewVisible, "listViewVisible")
+
+
 
   // const filteredItems = data.filter((place) => {
   //   if (selectedFilters.length === 0) {
@@ -61,17 +69,25 @@ function App() {
       <div className={mobileView}>
         <div className='sidebar'>
           <Logo />
-          <FilterSwitch
-            filtersVisible={filtersVisible}
+          <SearchBar
+            setFilteredItems={setFilteredItems}
+            setSearchBarActive={setSearchBarActive}
+            setListViewVisible={setListViewVisible}
             setFiltersVisible={setFiltersVisible} />
+          {!filtersVisible &&
+            <FilterSwitch
+              filtersVisible={filtersVisible}
+              setFiltersVisible={setFiltersVisible} />
+          }
           <ViewSwitch
             listViewVisible={listViewVisible}
             setListViewVisible={setListViewVisible} />
-          <Filters
-            selectedFilters={selectedFilters}
-            setSelectedFilters={setSelectedFilters}
-            setFiltersVisible={setFiltersVisible}
-            filteredItems={filteredItems} />
+          {!searchBarActive &&
+            <Filters
+              selectedFilters={selectedFilters}
+              setSelectedFilters={setSelectedFilters}
+              setFiltersVisible={setFiltersVisible}
+              filteredItems={filteredItems} />}
           <List
             setSelectedLocation={setSelectedLocation}
             filteredItems={filteredItems}

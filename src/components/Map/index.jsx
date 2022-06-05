@@ -97,65 +97,67 @@ export const Map = ({ selectedLocation, filteredItems, setSelectedLocation }) =>
           </Marker>
         )}
         {selectedLocation &&
-          <Popup
-            latitude={selectedLocation.latitude}
-            longitude={selectedLocation.longitude}
-            key={selectedLocation.index}
-            offsetTop={-60}
-            onClose={() => setSelectedLocation(null)}>
-            <div className='popup'>
-              <div className={selectedLocation.category}>
-              </div>
-              <div className="address">
-                {selectedLocation.address}
-              </div>
-              <div className="place-name">
-                {selectedLocation.name}
-              </div>
-              <div className="category-name">
-                {selectedLocation.categoryName}
-              </div>
-              {selectedLocation.changingStation === true
-                ? <div className="equipment">
-                  Přebalovací pult
+          <div className='popup-wrapper'>
+            <Popup
+              latitude={selectedLocation.latitude}
+              longitude={selectedLocation.longitude}
+              key={selectedLocation.index}
+              offsetTop={-60}
+              onClose={() => setSelectedLocation(null)}>
+              <div className='popup'>
+                <div className={selectedLocation.category}>
                 </div>
-                : null}
-              {selectedLocation.mat === true
-                ? <div className="equipment">
-                  Čistý koberec/podložka
+                <div className="address">
+                  {selectedLocation.address}
                 </div>
-                : null}
-              {selectedLocation.barrierFree === true
-                ? <div className="equipment">
-                  Bez bariér
+                <div className="place-name">
+                  {selectedLocation.name}
                 </div>
-                : null}
-              {selectedLocation.instagram !== null
-                ? <a
-                  href={selectedLocation.instagram}
-                  target="_blank"
-                  className="social-link">
-                  <img src={instagramUrl} alt="ikona instagram" />
-                </a>
-                : null}
-              {selectedLocation.facebook !== null
-                ? <a
-                  href={selectedLocation.facebook}
-                  target="_blank"
-                  className="social-link">
-                  <img src={facebookUrl} alt="ikona facebooku" />
-                </a>
-                : null}
-              {selectedLocation.web !== null
-                ? <a
-                  href={selectedLocation.web}
-                  target="_blank"
-                  className="social-link">
-                  <img src={globeUrl} alt="ikona globu" />
-                </a>
-                : null}
-            </div>
-          </Popup>
+                <div className="category-name">
+                  {selectedLocation.categoryName}
+                </div>
+                {selectedLocation.changingStation === true
+                  ? <div className="equipment">
+                    Přebalovací pult
+                  </div>
+                  : null}
+                {selectedLocation.mat === true
+                  ? <div className="equipment">
+                    Čistý koberec/podložka
+                  </div>
+                  : null}
+                {selectedLocation.barrierFree === true
+                  ? <div className="equipment">
+                    Bez bariér
+                  </div>
+                  : null}
+                {selectedLocation.instagram !== null
+                  ? <a
+                    href={selectedLocation.instagram}
+                    target="_blank"
+                    className="social-link">
+                    <img src={instagramUrl} alt="ikona instagram" />
+                  </a>
+                  : null}
+                {selectedLocation.facebook !== null
+                  ? <a
+                    href={selectedLocation.facebook}
+                    target="_blank"
+                    className="social-link">
+                    <img src={facebookUrl} alt="ikona facebooku" />
+                  </a>
+                  : null}
+                {selectedLocation.web !== null
+                  ? <a
+                    href={selectedLocation.web}
+                    target="_blank"
+                    className="social-link">
+                    <img src={globeUrl} alt="ikona globu" />
+                  </a>
+                  : null}
+              </div>
+            </Popup>
+          </div>
         }
         <div className='instagram'>
           <a

@@ -13,7 +13,7 @@ const data = [
     changingStation: false,
     mat: true,
     barrierFree: true,
-    filters: ["mat", "barrier-free", "indoor"]
+    filters: ["mat", "barrier-free", "inside"]
   },
   {
     index: "#2",
@@ -29,7 +29,7 @@ const data = [
     changingStation: false,
     mat: true,
     barrierFree: false,
-    filters: ["mat", "indoor"]
+    filters: ["mat", "inside"]
   },
   {
     index: "#3",
@@ -45,7 +45,7 @@ const data = [
     changingStation: false,
     mat: false,
     barrierFree: true,
-    filters: ["barrier-free", "outdoor"]
+    filters: ["barrier-free", "outside"]
 
   },
   {
@@ -62,7 +62,7 @@ const data = [
     changingStation: true,
     mat: true,
     barrierFree: true,
-    filters: ["mat", "barrier-free", "changing-station", "indoor"]
+    filters: ["mat", "barrier-free", "changing-station", "inside"]
   },
   {
     index: "#5",
@@ -78,7 +78,7 @@ const data = [
     changingStation: true,
     mat: true,
     barrierFree: false,
-    filters: ["mat", "changing-station", "indoor"]
+    filters: ["mat", "changing-station", "inside"]
   },
   {
     index: "#6",
@@ -94,7 +94,7 @@ const data = [
     changingStation: true,
     mat: false,
     barrierFree: true,
-    filters: ["barrier-free", "changing-station", "indoor", "outdoor"]
+    filters: ["barrier-free", "changing-station", "inside", "outside"]
   },
   {
     index: "#7",
@@ -110,7 +110,7 @@ const data = [
     changingStation: true,
     mat: false,
     barrierFree: true,
-    filters: ["barrier-free", "changing-station", "outdoor"]
+    filters: ["barrier-free", "changing-station", "outside"]
   },
   {
     index: "#8",
@@ -126,7 +126,7 @@ const data = [
     changingStation: true,
     mat: true,
     barrierFree: false,
-    filters: ["mat", "changing-station", "indoor"]
+    filters: ["mat", "changing-station", "inside"]
   },
   {
     index: "#9",
@@ -142,7 +142,7 @@ const data = [
     changingStation: true,
     mat: true,
     barrierFree: false,
-    filters: ["mat", "changing-station", "indoor"]
+    filters: ["mat", "changing-station", "inside"]
   },
   {
     index: "#10",
@@ -158,7 +158,7 @@ const data = [
     changingStation: false,
     mat: false,
     barrierFree: false,
-    filters: ["outdoor"]
+    filters: ["outside"]
   }
 ]
 

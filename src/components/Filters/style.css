@@ -50,13 +50,25 @@ ul{
   display: flex;
   flex-direction: column;
   margin: auto;
-  margin-top: 100px;
+  margin-top: 10px;
 }
 
 .btn-filters {
   margin-top: 30px;
   border-radius: 5px;
   background-color: #E0C9FF;
+  color: #7C2AE8;
+  font-family: "Amaranth", sans-serif;
+  border: none;
+  padding:8px 32px;
+  cursor:pointer;
+  box-shadow: 2px 2px 2px 0px #a9a9a9;
+}
+
+.btn-filters-secondary{
+  margin-top: 30px;
+  border-radius: 5px;
+  background-color: #e4e3e5;
   color: #7C2AE8;
   font-family: "Amaranth", sans-serif;
   border: none;
@@ -101,5 +113,7 @@ ul{
     margin-top: 20px;
     color: #00C4CC;
   }
-  
+  .btn-filters-secondary{
+    display: none;
+  }
 }

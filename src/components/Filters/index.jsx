@@ -69,6 +69,10 @@ export const Filters = ({ selectedFilters, setSelectedFilters, setFiltersVisible
           className="btn-filters"
           onClick={() => setFiltersVisible(false)}>
           Aplikovat filtry</button>}
+      <button
+        className="btn-filters-secondary"
+        onClick={() => setFiltersVisible(false)}>
+        Zavřít filtry</button>
     </div>
   )
 }
