@@ -62,10 +62,14 @@ ul{
   border: none;
   padding:8px 32px;
   cursor:pointer;
+  box-shadow: 2px 2px 2px 0px #a9a9a9;
 }
 
 .btn-filters.btn-disabled{
-  background-color: #ccc;
+  background-color: rgb(223, 223, 223);
+  color: #C599FF;
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 .btn-filters:hover {
@@ -75,6 +79,9 @@ ul{
 .btn-filters:active {
   position:relative;
 	top:1px;
+}
+.filter-error{
+  display: none;
 }
 
 @media (min-width: 768px) {
@@ -91,10 +98,8 @@ ul{
 
   .filter-error{
     display: flex;
+    margin-top: 20px;
+    color: #00C4CC;
   }
   
-  .filter-error-hidden{
-    display: none;
-  }
-
 }

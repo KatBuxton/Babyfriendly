@@ -56,12 +56,19 @@ export const Filters = ({ selectedFilters, setSelectedFilters, setFiltersVisible
             key={item.id}
             handleChange={(isChecked) => handleChange(isChecked, item)} />
         )}
+        {filteredItems.length === 0
+          ? <div className="filter-error">Zkus upravit filtry</div>
+          : <></>}
       </ul>
-      <div className={filteredItems.length === 0 ? "filter-error" : "filter-error-hidden"}>Zkus upravit filtry</div>
-      <button
-        className={filteredItems.length === 0 ? "btn-filters btn-disabled" : "btn-filters"}
-        onClick={() => setFiltersVisible(false)}>
-        Aplikovat filtry</button>
+      {filteredItems.length === 0
+        ? <button
+          className="btn-filters btn-disabled"
+          disabled>
+          Zkus upravit filtry</button>
+        : <button
+          className="btn-filters"
+          onClick={() => setFiltersVisible(false)}>
+          Aplikovat filtry</button>}
     </div>
   )
 }

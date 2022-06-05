@@ -3,7 +3,9 @@ import "./style.css";
 import 'mapbox-gl/dist/mapbox-gl.css';
 import ReactMapGL, { Marker, Popup, NavigationControl, FlyToInterpolator } from 'react-map-gl';
 import pinUrl from '../../img/pin.svg';
-import data from '../../data.js';
+import globeUrl from '../../img/globe.svg';
+import facebookUrl from '../../img/facebook.svg';
+import instagramUrl from '../../img/instagram.svg';
 
 const initialCoords = {
   latitude: 50.08854,
@@ -127,6 +129,11 @@ export const Map = ({ selectedLocation, filteredItems, setSelectedLocation }) =>
                 ? <div className="equipment">
                   Bez bariér
                 </div>
+                : null}
+              {selectedLocation.instagram !== null
+                ? <a href={selectedLocation.instagram} className="social-link">
+                  <img src={instagramUrl} alt="ikona instagram" />
+                </a>
                 : null}
             </div>
           </Popup>
