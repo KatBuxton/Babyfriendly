@@ -13,7 +13,7 @@ const data = [
     changingStation: false,
     mat: true,
     barrierFree: true,
-    filters: ["mat", "barrier-free"]
+    filters: ["mat", "barrier-free", "indoor"]
   },
   {
     index: "#2",
@@ -29,7 +29,7 @@ const data = [
     changingStation: false,
     mat: true,
     barrierFree: false,
-    filters: ["mat"]
+    filters: ["mat", "indoor"]
   },
   {
     index: "#3",
@@ -37,7 +37,7 @@ const data = [
     longitude: 14.59381452678034,
     name: "Block Café",
     address: "K Dálnici 61, Praha 22",
-    category: "outdoors",
+    category: "outdoor",
     categoryName: "Místo s venkovním hřištěm",
     instagram: "https://www.instagram.com/blockuhrineves/",
     facebook: null,
@@ -45,7 +45,7 @@ const data = [
     changingStation: false,
     mat: false,
     barrierFree: true,
-    filters: ["barrier-free"]
+    filters: ["barrier-free", "outdoor"]
 
   },
   {
@@ -62,7 +62,7 @@ const data = [
     changingStation: true,
     mat: true,
     barrierFree: true,
-    filters: ["mat", "barrier-free", "changing-station"]
+    filters: ["mat", "barrier-free", "changing-station", "indoor"]
   },
   {
     index: "#5",
@@ -78,7 +78,7 @@ const data = [
     changingStation: true,
     mat: true,
     barrierFree: false,
-    filters: ["mat", "changing-station"]
+    filters: ["mat", "changing-station", "indoor"]
   },
   {
     index: "#6",
@@ -94,7 +94,7 @@ const data = [
     changingStation: true,
     mat: false,
     barrierFree: true,
-    filters: ["barrier-free", "changing-station"]
+    filters: ["barrier-free", "changing-station", "indoor", "outdoor"]
   },
   {
     index: "#7",
@@ -102,7 +102,7 @@ const data = [
     longitude: 14.660282613284126,
     name: "Říčanský pivovar",
     address: "Olivova 246/23, Říčany",
-    category: "outdoors",
+    category: "outdoor",
     categoryName: "Místo s venkovním hřištěm",
     instagram: "https://www.instagram.com/ricanskypivovar/",
     facebook: null,
@@ -110,7 +110,7 @@ const data = [
     changingStation: true,
     mat: false,
     barrierFree: true,
-    filters: ["barrier-free", "changing-station"]
+    filters: ["barrier-free", "changing-station", "outdoor"]
   },
   {
     index: "#8",
@@ -126,7 +126,7 @@ const data = [
     changingStation: true,
     mat: true,
     barrierFree: false,
-    filters: ["mat", "changing-station"]
+    filters: ["mat", "changing-station", "indoor"]
   },
   {
     index: "#9",
@@ -142,7 +142,7 @@ const data = [
     changingStation: true,
     mat: true,
     barrierFree: false,
-    filters: ["mat", "changing-station"]
+    filters: ["mat", "changing-station", "indoor"]
   },
   {
     index: "#10",
@@ -150,7 +150,7 @@ const data = [
     longitude: 14.605811793368943,
     name: "U Splavu",
     address: "U Nadýmače 200/37, Praha 22",
-    category: "outdoors",
+    category: "outdoor",
     categoryName: "Místo s venkovním hřištěm",
     instagram: null,
     facebook: "https://www.facebook.com/usplavu",
@@ -158,7 +158,7 @@ const data = [
     changingStation: false,
     mat: false,
     barrierFree: false,
-    filters: ["outdoors"]
+    filters: ["outdoor"]
   }
 ]
 

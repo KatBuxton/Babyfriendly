@@ -35,12 +35,12 @@ const filters =
   weather: [
     {
       id: "7",
-      name: "indoors",
+      name: "indoor",
       text: "Chci být vevnitř"
     },
     {
       id: "8",
-      name: "outdoors",
+      name: "outdoor",
       text: "Chci být venku"
     },
   ],

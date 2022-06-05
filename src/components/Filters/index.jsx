@@ -38,7 +38,7 @@ export const Filters = ({ selectedFilters, setSelectedFilters, setFiltersVisible
             key={item.id}
             handleChange={(isChecked) => handleChange(isChecked, item)} />
         )}
-        <div className="group-name">Cena</div>
+        {/* <div className="group-name">Cena</div>
         {filters.price.map((item) =>
           <FilterItem
             name={item.name}
@@ -46,7 +46,7 @@ export const Filters = ({ selectedFilters, setSelectedFilters, setFiltersVisible
             id={item.id}
             key={item.id}
             handleChange={(isChecked) => handleChange(isChecked, item)} />
-        )}
+        )} */}
         <div className="group-name">Podle počasí</div>
         {filters.weather.map((item) =>
           <FilterItem
