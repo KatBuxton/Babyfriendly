@@ -157,6 +157,16 @@ export const Map = ({ selectedLocation, filteredItems, setSelectedLocation }) =>
             </div>
           </Popup>
         }
+        <div className='instagram'>
+          <a
+            href="https://www.instagram.com/baby_friendly_cz/"
+            target="_blank"
+            className="social-link">
+            Pro víc inspirace<br></br>sledujte<br></br>
+            <img src={instagramUrl} alt="ikona instagram" />
+            <br></br>@baby_friendly_cz
+          </a>
+        </div>
         <NavigationControl style={navControlStyle} showZoom={true} />
       </ReactMapGL>
     </div >
