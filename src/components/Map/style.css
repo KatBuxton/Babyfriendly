@@ -103,6 +103,13 @@
 	margin-bottom: 5px;
 }
 
+.social-link{
+	margin-top: 10px;
+}
+
+.mapboxgl-popup-close-button {
+	display:none;
+}
 
 @media (min-width: 768px) {
 

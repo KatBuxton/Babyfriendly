@@ -131,8 +131,27 @@ export const Map = ({ selectedLocation, filteredItems, setSelectedLocation }) =>
                 </div>
                 : null}
               {selectedLocation.instagram !== null
-                ? <a href={selectedLocation.instagram} className="social-link">
+                ? <a
+                  href={selectedLocation.instagram}
+                  target="_blank"
+                  className="social-link">
                   <img src={instagramUrl} alt="ikona instagram" />
+                </a>
+                : null}
+              {selectedLocation.facebook !== null
+                ? <a
+                  href={selectedLocation.facebook}
+                  target="_blank"
+                  className="social-link">
+                  <img src={facebookUrl} alt="ikona facebooku" />
+                </a>
+                : null}
+              {selectedLocation.web !== null
+                ? <a
+                  href={selectedLocation.web}
+                  target="_blank"
+                  className="social-link">
+                  <img src={globeUrl} alt="ikona globu" />
                 </a>
                 : null}
             </div>
