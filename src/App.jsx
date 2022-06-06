@@ -72,6 +72,7 @@ function App() {
           <SearchBar
             setFilteredItems={setFilteredItems}
             setSearchBarActive={setSearchBarActive}
+            searchBarActive={searchBarActive}
             setListViewVisible={setListViewVisible}
             setFiltersVisible={setFiltersVisible} />
           {!filtersVisible &&

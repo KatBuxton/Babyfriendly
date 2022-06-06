@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import "./style.css";
 import data from '../../data.js';
-import filters from '../Filters/filters';
+import closeIconUrl from '../../img/close.svg';
 
 
-export const SearchBar = ({ setFilteredItems, setSearchBarActive, setListViewVisible, setFiltersVisible }) => {
+export const SearchBar = ({ setFilteredItems, setSearchBarActive, searchBarActive, setListViewVisible, setFiltersVisible }) => {
   const [q, setQ] = useState("");
   // console.log(q)
   // const searchInput
@@ -21,11 +21,15 @@ export const SearchBar = ({ setFilteredItems, setSearchBarActive, setListViewVis
 
   const handleChange = (value) => {
 
-    // if (!value) {
-    //   setSearchBarActive(true)
-    //   console.log()
-    //   return
-    // }
+    if (value) {
+      setSearchBarActive(true)
+      setFiltersVisible(false)
+    }
+    if (!value) {
+      setSearchBarActive(false)
+      setFiltersVisible(true)
+    }
+
     setQ(value)
 
     const lowercasedValue = value.toLowerCase()
@@ -50,18 +54,24 @@ export const SearchBar = ({ setFilteredItems, setSearchBarActive, setListViewVis
   return (
     <div className="search-wrapper">
       <input
-        type="search"
+        type="text"
         className="search-input"
         value={q}
         onFocus={() => {
-          setSearchBarActive(true)
-          setFiltersVisible(false)
+          // setSearchBarActive(true)
+          // setFiltersVisible(false)
         }}
         onChange={(e) => handleChange(e.target.value)}
         onBlur={() => {
-          setSearchBarActive(false)
+          // setSearchBarActive(false)
         }}
       />
+      <button
+        type="reset"
+        className={searchBarActive ? "close-button" : " close-button close-button-hidden"}
+        onClick={() => handleChange("")}>
+      </button>
+      {/* <div ><img src={closeIconUrl} className="close-button" alt="alt" /></div> */}
     </div>
   )
 

@@ -60,19 +60,23 @@ export const Filters = ({ selectedFilters, setSelectedFilters, setFiltersVisible
           ? <div className="filter-error">Zkus upravit filtry</div>
           : <></>}
       </ul>
-      {filteredItems.length === 0
-        ? <button
-          className="btn-filters btn-disabled"
-          disabled>
-          Zkus upravit filtry</button>
-        : <button
-          className="btn-filters"
+      <div className='filter-btns-wrapper'>
+        {filteredItems.length === 0
+          ? <button
+            className="btn-filters btn-disabled"
+            disabled>
+            Zkus upravit filtry</button>
+          : <button
+            className="btn-filters"
+            onClick={() => setFiltersVisible(false)}>
+            Aplikovat filtry
+          </button>}
+        <button
+          className="btn-filters btn-secondary"
           onClick={() => setFiltersVisible(false)}>
-          Aplikovat filtry</button>}
-      <button
-        className="btn-filters-secondary"
-        onClick={() => setFiltersVisible(false)}>
-        Zavřít filtry</button>
+          Zavřít filtry
+        </button>
+      </div>
     </div>
   )
 }

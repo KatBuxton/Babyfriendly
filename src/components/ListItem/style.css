@@ -9,7 +9,8 @@
   align-items: flex-end;
   border-radius: 10px;
   margin-bottom: 10px;
-  box-shadow: 2px 2px 2px 0px #a9a9a9;
+  box-shadow: 2px 2px 2px 0px #d7d7d7;
+  cursor:pointer;
 }
 
 .list-item:active {
