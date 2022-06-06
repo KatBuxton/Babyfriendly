@@ -56,6 +56,7 @@ export const SearchBar = ({ setFilteredItems, setSearchBarActive, searchBarActiv
       <input
         type="text"
         className="search-input"
+        placeholder="Hledat podle názvu nebo adresy"
         value={q}
         onFocus={() => {
           // setSearchBarActive(true)

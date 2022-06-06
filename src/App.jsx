@@ -19,6 +19,16 @@ function App() {
   const [selectedFilters, setSelectedFilters] = useState([]);
   const [filteredItems, setFilteredItems] = useState(data)
   const [searchBarActive, setSearchBarActive] = useState(false)
+  const [isDesktop, setDesktop] = useState(window.innerWidth > 768);
+
+  const updateMedia = () => {
+    setDesktop(window.innerWidth > 768);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", updateMedia);
+    return () => window.removeEventListener("resize", updateMedia);
+  });
 
   let mobileView = ""
   if (filtersVisible === true) {
@@ -32,7 +42,7 @@ function App() {
   console.log(mobileView, "mobileView")
   console.log(filtersVisible, "filtersVisible")
   console.log(listViewVisible, "listViewVisible")
-
+  console.log(isDesktop, "isDesktop")
 
 
   // const filteredItems = data.filter((place) => {
@@ -68,13 +78,25 @@ function App() {
     <div className="App">
       <div className={mobileView}>
         <div className='sidebar'>
-          <Logo />
-          <SearchBar
-            setFilteredItems={setFilteredItems}
-            setSearchBarActive={setSearchBarActive}
-            searchBarActive={searchBarActive}
-            setListViewVisible={setListViewVisible}
-            setFiltersVisible={setFiltersVisible} />
+          {isDesktop
+            ? <>
+              <Logo />
+              <SearchBar
+                setFilteredItems={setFilteredItems}
+                setSearchBarActive={setSearchBarActive}
+                searchBarActive={searchBarActive}
+                setListViewVisible={setListViewVisible}
+                setFiltersVisible={setFiltersVisible} />
+            </>
+            : <div className="header">
+              <Logo />
+              <SearchBar
+                setFilteredItems={setFilteredItems}
+                setSearchBarActive={setSearchBarActive}
+                searchBarActive={searchBarActive}
+                setListViewVisible={setListViewVisible}
+                setFiltersVisible={setFiltersVisible} />
+            </div>}
           {!filtersVisible &&
             <FilterSwitch
               filtersVisible={filtersVisible}
