@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import "./style.css";
 import filters from './filters';
 import { FilterItem } from '../FilterItem';
 
 
-export const Filters = ({ selectedFilters, setSelectedFilters, setFiltersVisible, filteredItems }) => {
+export const Filters = ({ setSelectedFilters, setFiltersVisible, filteredItems }) => {
 
 
   const handleChange = (isChecked, item) => {

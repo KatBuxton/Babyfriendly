@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import "./style.css";
 import data from '../../data.js';
-import closeIconUrl from '../../img/close.svg';
 
 
 export const SearchBar = ({ setFilteredItems, setSearchBarActive, searchBarActive, setListViewVisible, setFiltersVisible }) => {

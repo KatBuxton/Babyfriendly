@@ -11,7 +11,6 @@ export const Logo = () => {
         <h1>
           <span className="headlinePurple">baby</span>
           <span className="headlineBlue">FRIENDLY</span>
-          <span className="headlinePurple">.cz</span>
         </h1>
       </div>
       <div

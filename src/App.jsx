@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import { Column } from './components/Column';
-// import { MapSection } from './components/MapSection';
 import { Map } from "./components/Map";
 import { Logo } from './components/Logo';
 import { ViewSwitch } from './components/ViewSwitch';

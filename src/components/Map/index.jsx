@@ -135,6 +135,7 @@ export const Map = ({ selectedLocation, filteredItems, setSelectedLocation }) =>
                   ? <a
                     href={selectedLocation.instagram}
                     target="_blank"
+                    rel="noreferrer"
                     className="social-link">
                     <img src={instagramUrl} alt="ikona instagram" />
                   </a>
@@ -143,6 +144,7 @@ export const Map = ({ selectedLocation, filteredItems, setSelectedLocation }) =>
                   ? <a
                     href={selectedLocation.facebook}
                     target="_blank"
+                    rel="noreferrer"
                     className="social-link">
                     <img src={facebookUrl} alt="ikona facebooku" />
                   </a>
@@ -151,6 +153,7 @@ export const Map = ({ selectedLocation, filteredItems, setSelectedLocation }) =>
                   ? <a
                     href={selectedLocation.web}
                     target="_blank"
+                    rel="noreferrer"
                     className="social-link">
                     <img src={globeUrl} alt="ikona globu" />
                   </a>
@@ -163,6 +166,7 @@ export const Map = ({ selectedLocation, filteredItems, setSelectedLocation }) =>
           <a
             href="https://www.instagram.com/baby_friendly_cz/"
             target="_blank"
+            rel="noreferrer"
             className="social-link">
             Pro víc inspirace<br></br>sledujte<br></br>
             <img src={instagramUrl} alt="ikona instagram" />
