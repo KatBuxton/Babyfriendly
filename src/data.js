@@ -12,8 +12,8 @@ const data = [
     web: null,
     changingStation: false,
     mat: true,
-    barrierFree: true,
-    filters: ["mat", "barrier-free", "inside"]
+    barrierFree: false,
+    filters: ["mat", "inside"]
   },
   {
     index: "#2",
@@ -159,6 +159,86 @@ const data = [
     mat: false,
     barrierFree: false,
     filters: ["outside"]
+  },
+  {
+    index: "#11",
+    latitude: 50.11333838113994,
+    longitude: 14.467535088300222,
+    name: "Restaurace Koráb",
+    address: "Krejčího 2261, Praha 8",
+    category: "outdoors",
+    categoryName: "Místo s venkovním hřištěm",
+    instagram: null,
+    facebook: null,
+    web: "http://www.restauracekorab.cz/",
+    changingStation: true,
+    mat: false,
+    barrierFree: true,
+    filters: ["changing-station", "barrier-free", "outside"]
+  },
+  {
+    index: "#12",
+    latitude: 50.79137905909804,
+    longitude: 15.218751743990376,
+    name: "Hotel Peklo",
+    address: "Josefův Důl 960,  Josefův Důl",
+    category: "outdoors",
+    categoryName: "Místo s venkovním hřištěm",
+    instagram: "https://www.instagram.com/hotelpeklo/",
+    facebook: null,
+    web: null,
+    changingStation: true,
+    mat: true,
+    barrierFree: true,
+    filters: ["changing-station", "barrier-free", "mat", "outside", "inside"]
+  },
+  {
+    index: "#13",
+    latitude: 50.78789308548892,
+    longitude: 15.214508770980332,
+    name: "Perla Jizery",
+    address: "Josefův Důl 187, Josefův Důl",
+    category: "restaurant",
+    categoryName: "Restaurace s koutkem",
+    instagram: "https://www.instagram.com/hotelperlajizery/",
+    facebook: null,
+    web: null,
+    changingStation: false,
+    mat: false,
+    barrierFree: false,
+    filters: ["inside"]
+  },
+  {
+    index: "#14",
+    latitude: 50.79498183137402,
+    longitude: 15.163645870980593,
+    name: "Prezidentská chata",
+    address: "Janov nad Nisou 524, Bedřichov",
+    category: "restaurant",
+    categoryName: "Restaurace s koutkem",
+    instagram: "https://www.instagram.com/prezidentska/",
+    facebook: null,
+    web: null,
+    changingStation: false,
+    mat: false,
+    barrierFree: false,
+    filters: ["inside"]
+  },
+  {
+    index: "#15",
+    latitude: 50.02984256207178,
+    longitude: 14.604995656107606,
+    name: "Pivovarská Restaurace",
+    address: "K Sokolovně 38, Praha 22",
+    category: "outdoors",
+    categoryName: "Místo s venkovním hřištěm",
+    instagram: null,
+    facebook: null,
+    web: "https://restaurantpivovarska.cz/",
+    changingStation: false,
+    mat: false,
+    barrierFree: true,
+    filters: ["outside", "barrier-free"]
   }
 ]
 

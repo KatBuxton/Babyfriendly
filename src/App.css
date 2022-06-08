@@ -22,6 +22,7 @@ display: none;
 
 .list-view-mobile-hidden .map  {
 display: flex;
+overflow: hidden;
 }
 
 .list-view-mobile-hidden .list  {

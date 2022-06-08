@@ -37,10 +37,10 @@ function App() {
     mobileView = "container"
   }
 
-  console.log(mobileView, "mobileView")
-  console.log(filtersVisible, "filtersVisible")
-  console.log(listViewVisible, "listViewVisible")
-  console.log(isDesktop, "isDesktop")
+  // console.log(mobileView, "mobileView")
+  // console.log(filtersVisible, "filtersVisible")
+  // console.log(listViewVisible, "listViewVisible")
+  // console.log(isDesktop, "isDesktop")
 
 
   // const filteredItems = data.filter((place) => {
@@ -98,7 +98,8 @@ function App() {
           {!filtersVisible &&
             <FilterSwitch
               filtersVisible={filtersVisible}
-              setFiltersVisible={setFiltersVisible} />
+              setFiltersVisible={setFiltersVisible}
+              setSelectedLocation={setSelectedLocation} />
           }
           <ViewSwitch
             listViewVisible={listViewVisible}

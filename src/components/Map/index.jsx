@@ -51,7 +51,7 @@ export const Map = ({ selectedLocation, filteredItems, setSelectedLocation }) =>
 
   const navControlStyle = {
     right: 10,
-    bottom: 10
+    bottom: 40,
   }
 
   return (

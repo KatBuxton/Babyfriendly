@@ -46,6 +46,10 @@ ul{
   margin-bottom: 7px;
 }
 
+.group-name:not(:first-child) {
+  margin-top: 20px;
+}
+
 .mobile-filters .filter-list{
   display: flex;
   flex-direction: column;
