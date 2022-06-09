@@ -23,6 +23,7 @@ function App() {
   const [searchBarActive, setSearchBarActive] = useState(false)
   const [isDesktop, setDesktop] = useState(window.innerWidth > 768);
   const [invert, setInvert] = useState(false);
+  const [q, setQ] = useState("");
 
   const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
   const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
@@ -36,6 +37,21 @@ function App() {
   const updateMedia = () => {
     setDesktop(window.innerWidth > 768);
   };
+
+  // useEffect(() => {
+  //   console.log(q)
+  // }, [q])
+
+  const handleFiltersVisible = (filtersVisible) => {
+    setQ("")
+    setFiltersVisible(filtersVisible)
+    setSearchBarActive(false)
+    console.log(filtersVisible)
+
+  }
+
+  console.log(filtersVisible)
+
 
   useEffect(() => {
     window.addEventListener("resize", updateMedia);
@@ -96,15 +112,15 @@ function App() {
     >
       <div className={mobileView}>
         <div className='sidebar'>
-          <div className="theme-switch-wrapper">
+          {/* <div className="theme-switch-wrapper">
             <label className="theme-switch" htmlFor="checkbox">
               <input
                 type="checkbox" id="checkbox"
                 onChange={switchTheme} />
               <div className="slider round"></div>
             </label>
-            <em></em>
-          </div>
+            <em></em> */}
+          {/* </div> */}
           {/* <ThemeSwitch
             // invert={invert}
             // setInvert={setInvert}
@@ -121,25 +137,32 @@ function App() {
             ? <>
               <Logo />
               <SearchBar
+                q={q}
+                setQ={setQ}
                 setFilteredItems={setFilteredItems}
                 setSearchBarActive={setSearchBarActive}
                 searchBarActive={searchBarActive}
                 setListViewVisible={setListViewVisible}
-                setFiltersVisible={setFiltersVisible} />
+                setFiltersVisible={setFiltersVisible}
+                isDesktop={isDesktop} />
             </>
             : <div className="header">
               <Logo />
               <SearchBar
+                q={q}
+                setQ={setQ}
                 setFilteredItems={setFilteredItems}
                 setSearchBarActive={setSearchBarActive}
                 searchBarActive={searchBarActive}
                 setListViewVisible={setListViewVisible}
-                setFiltersVisible={setFiltersVisible} />
+                setFiltersVisible={setFiltersVisible}
+                isDesktop={isDesktop} />
             </div>}
           {!filtersVisible &&
             <FilterSwitch
               filtersVisible={filtersVisible}
-              setFiltersVisible={setFiltersVisible} />
+              setFiltersVisible={handleFiltersVisible}
+            />
           }
           <ViewSwitch
             listViewVisible={listViewVisible}
@@ -150,7 +173,8 @@ function App() {
               setSelectedFilters={setSelectedFilters}
               setFiltersVisible={setFiltersVisible}
               filteredItems={filteredItems}
-              setSelectedLocation={setSelectedLocation} />}
+              setSelectedLocation={setSelectedLocation}
+            />}
           <List
             setSelectedLocation={setSelectedLocation}
             filteredItems={filteredItems}
@@ -163,7 +187,7 @@ function App() {
           setSelectedLocation={setSelectedLocation}
           filteredItems={filteredItems} />
       </div>
-    </div>
+    </div >
   );
 }
 

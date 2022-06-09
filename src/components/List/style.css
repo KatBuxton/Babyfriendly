@@ -1,8 +1,8 @@
 .list {
   flex-direction: column;
   margin: auto;
-  height: 100vh;
   width: 80vw;
+  padding-bottom: 20px;
 }
 
 @media (min-width: 768px) {

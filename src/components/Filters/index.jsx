@@ -4,7 +4,7 @@ import filters from './filters';
 import { FilterItem } from '../FilterItem';
 
 
-export const Filters = ({ setSelectedFilters, setFiltersVisible, filteredItems, setSelectedLocation }) => {
+export const Filters = ({ setSelectedFilters, setFiltersVisible, filteredItems, setSelectedLocation, selectedFilters }) => {
 
 
   const handleChange = (isChecked, item) => {
@@ -28,7 +28,9 @@ export const Filters = ({ setSelectedFilters, setFiltersVisible, filteredItems, 
             text={item.text}
             id={item.id}
             key={item.id}
-            handleChange={(isChecked) => handleChange(isChecked, item)} />
+            isChecked={selectedFilters.includes(item.name)}
+            handleChange={(isChecked) => handleChange(isChecked, item)
+            } />
         )}
         <div className="group-name">Vybavení</div>
         {filters.equipment.map((item) =>
@@ -37,6 +39,7 @@ export const Filters = ({ setSelectedFilters, setFiltersVisible, filteredItems, 
             text={item.text}
             id={item.id}
             key={item.id}
+            isChecked={selectedFilters.includes(item.name)}
             handleChange={(isChecked) => handleChange(isChecked, item)} />
         )}
         {/* <div className="group-name">Cena</div>
@@ -55,6 +58,7 @@ export const Filters = ({ setSelectedFilters, setFiltersVisible, filteredItems, 
             text={item.text}
             id={item.id}
             key={item.id}
+            isChecked={selectedFilters.includes(item.name)}
             handleChange={(isChecked) => handleChange(isChecked, item)} />
         )}
         {filteredItems.length === 0
@@ -74,8 +78,11 @@ export const Filters = ({ setSelectedFilters, setFiltersVisible, filteredItems, 
           </button>}
         <button
           className="btn-filters btn-secondary"
-          onClick={() => setFiltersVisible(false)}>
-          Zavřít filtry
+          onClick={() => {
+            setFiltersVisible(false)
+            setSelectedFilters([])
+          }}>
+          Vymazat filtry
         </button>
       </div>
     </div>

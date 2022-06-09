@@ -3,8 +3,7 @@ import "./style.css";
 import data from '../../data.js';
 
 
-export const SearchBar = ({ setFilteredItems, setSearchBarActive, searchBarActive, setListViewVisible, setFiltersVisible }) => {
-  const [q, setQ] = useState("");
+export const SearchBar = ({ setFilteredItems, setSearchBarActive, searchBarActive, q, setQ, setFiltersVisible, isDesktop }) => {
   // console.log(q)
   // const searchInput
   // data.filter((place) => {
@@ -20,13 +19,14 @@ export const SearchBar = ({ setFilteredItems, setSearchBarActive, searchBarActiv
 
   const handleChange = (value) => {
 
+
     if (value) {
       setSearchBarActive(true)
       setFiltersVisible(false)
     }
     if (!value) {
       setSearchBarActive(false)
-      setFiltersVisible(true)
+      isDesktop && setFiltersVisible(true)
     }
 
     setQ(value)
