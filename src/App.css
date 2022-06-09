@@ -6,10 +6,10 @@
 
 .App {
   height: 100%;
-  /* background-image: linear-gradient(var(--gradient-colors));
+  background-image: linear-gradient(var(--gradient-colors));
   background-repeat: no-repeat;
   background-attachment: fixed;
-  color: var(--font-color);  */
+  color: var(--font-color); 
 }
 
 .container {
