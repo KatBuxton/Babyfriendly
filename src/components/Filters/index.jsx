@@ -12,7 +12,7 @@ export const Filters = ({ setSelectedFilters, setFiltersVisible, filteredItems, 
       setSelectedFilters(prevState =>
         [...prevState, item.name]
       );
-      // setSelectedLocation(null);
+      setSelectedLocation(null);
     } else {
       setSelectedFilters((prevState) => prevState.filter(name => name !== item.name))
     }

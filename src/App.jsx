@@ -18,6 +18,8 @@ function App() {
   const [filteredItems, setFilteredItems] = useState(data)
   const [searchBarActive, setSearchBarActive] = useState(false)
   const [isDesktop, setDesktop] = useState(window.innerWidth > 768);
+  // const [invert, setInvert] = useState(true);
+
 
   const updateMedia = () => {
     setDesktop(window.innerWidth > 768);
@@ -27,6 +29,8 @@ function App() {
     window.addEventListener("resize", updateMedia);
     return () => window.removeEventListener("resize", updateMedia);
   });
+
+  // const invertStyle = invert ? { filter: "invert(100%)" } : undefined;
 
   let mobileView = ""
   if (filtersVisible === true) {
@@ -73,9 +77,19 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div
+      className="App"
+    // style={invertStyle}
+    >
       <div className={mobileView}>
         <div className='sidebar'>
+          {/* <button
+            onClick={() => {
+              setInvert(!invert);
+            }}
+          >
+            Invert
+          </button> */}
           {isDesktop
             ? <>
               <Logo />
@@ -98,8 +112,7 @@ function App() {
           {!filtersVisible &&
             <FilterSwitch
               filtersVisible={filtersVisible}
-              setFiltersVisible={setFiltersVisible}
-              setSelectedLocation={setSelectedLocation} />
+              setFiltersVisible={setFiltersVisible} />
           }
           <ViewSwitch
             listViewVisible={listViewVisible}
@@ -109,7 +122,8 @@ function App() {
               selectedFilters={selectedFilters}
               setSelectedFilters={setSelectedFilters}
               setFiltersVisible={setFiltersVisible}
-              filteredItems={filteredItems} />}
+              filteredItems={filteredItems}
+              setSelectedLocation={setSelectedLocation} />}
           <List
             setSelectedLocation={setSelectedLocation}
             filteredItems={filteredItems}
