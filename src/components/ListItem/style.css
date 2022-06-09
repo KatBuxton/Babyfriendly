@@ -19,11 +19,11 @@
 }
 
 .list-item__info {
-  color: black;
+  color: var(--font-color);
   font-family: 'Open Sans', sans-serif;
   text-align: left;
   height: 40%;
-  background-color: white;
+  background-color: var(--background-secondary);
   border-radius: 0 0 10px 10px;
   width: 100%;
 }

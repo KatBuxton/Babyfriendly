@@ -6,8 +6,12 @@ import { ViewSwitch } from './components/ViewSwitch';
 import { List } from './components/List';
 import { Filters } from './components/Filters';
 import { FilterSwitch } from './components/FilterSwitch';
-import data from './data.js';
 import { SearchBar } from './components/SearchBar';
+// import { ThemeSwitch } from './components/ThemeSwitch';
+import useLocalStorage from 'use-local-storage';
+import data from './data.js';
+
+
 
 
 function App() {
@@ -18,8 +22,16 @@ function App() {
   const [filteredItems, setFilteredItems] = useState(data)
   const [searchBarActive, setSearchBarActive] = useState(false)
   const [isDesktop, setDesktop] = useState(window.innerWidth > 768);
-  // const [invert, setInvert] = useState(true);
+  const [invert, setInvert] = useState(false);
 
+  const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
+
+  const switchTheme = () => {
+    const newTheme = theme === "light" ? "dark" : "light";
+    setTheme(newTheme);
+    setInvert(!invert);
+  }
 
   const updateMedia = () => {
     setDesktop(window.innerWidth > 768);
@@ -30,8 +42,6 @@ function App() {
     return () => window.removeEventListener("resize", updateMedia);
   });
 
-  // const invertStyle = invert ? { filter: "invert(100%)" } : undefined;
-
   let mobileView = ""
   if (filtersVisible === true) {
     mobileView = "container mobile-filters"
@@ -40,6 +50,9 @@ function App() {
   } else {
     mobileView = "container"
   }
+
+  console.log(theme)
+
 
   // console.log(mobileView, "mobileView")
   // console.log(filtersVisible, "filtersVisible")
@@ -79,10 +92,24 @@ function App() {
   return (
     <div
       className="App"
-    // style={invertStyle}
+      data-theme={theme}
     >
       <div className={mobileView}>
         <div className='sidebar'>
+          <div className="theme-switch-wrapper">
+            <label className="theme-switch" htmlFor="checkbox">
+              <input
+                type="checkbox" id="checkbox"
+                onChange={switchTheme} />
+              <div className="slider round"></div>
+            </label>
+            <em></em>
+          </div>
+          {/* <ThemeSwitch
+            // invert={invert}
+            // setInvert={setInvert}
+            // theme={theme}
+            // setTheme={setTheme} /> */}
           {/* <button
             onClick={() => {
               setInvert(!invert);
@@ -131,6 +158,7 @@ function App() {
           />
         </div>
         <Map
+          invert={invert}
           selectedLocation={selectedLocation}
           setSelectedLocation={setSelectedLocation}
           filteredItems={filteredItems} />

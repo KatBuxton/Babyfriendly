@@ -16,6 +16,7 @@
 
 .popup {
   display: flex;
+	background-color: var(--background-secondary);
   flex-direction: column;
   justify-content: center;
 	text-align: center;
@@ -44,7 +45,7 @@
  border-radius: 10px;
  width: fit-content;
  height: auto;
- padding: 3px 5px 3px 5px;
+ padding: 3px 10px 3px 10px;
  font-size: smaller;
  margin: auto;
  margin-bottom: 20px;

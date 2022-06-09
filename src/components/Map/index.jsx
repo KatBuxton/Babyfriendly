@@ -13,7 +13,7 @@ const initialCoords = {
   zoom: 13
 }
 
-export const Map = ({ selectedLocation, filteredItems, setSelectedLocation }) => {
+export const Map = ({ selectedLocation, filteredItems, setSelectedLocation, invert }) => {
   const [viewport, setViewport] = useState(initialCoords)
 
   const notInitialRender = useRef(false)
@@ -49,13 +49,17 @@ export const Map = ({ selectedLocation, filteredItems, setSelectedLocation }) =>
     }
   }, [selectedLocation]);
 
+  const invertStyle = invert ? { filter: "invert(100%)" } : undefined;
+
   const navControlStyle = {
     right: 10,
     bottom: 40,
   }
 
   return (
-    <div className="map">
+    <div className="map"
+      style={invertStyle}
+    >
       <ReactMapGL
         {...viewport}
         width="100%"

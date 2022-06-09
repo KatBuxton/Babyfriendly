@@ -25,7 +25,7 @@ label input {
   left: 0;
   height: 16px;
   width: 16px;
-  border: #00C4CC 2px solid;
+  border: var(--accent) 2px solid;
 }
 
 label:hover input ~ .checkmark {
@@ -33,7 +33,7 @@ label:hover input ~ .checkmark {
 }
 
 label input:checked ~ .checkmark {
-  background-color: #00C4CC;
+  background-color: var(--accent);
 }
 
 ul{
