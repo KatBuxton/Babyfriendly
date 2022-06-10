@@ -1,5 +1,5 @@
 <p align="center">
-![Logo](https://user-images.githubusercontent.com/101291722/173043472-17528b65-9585-4d75-a6cb-7ace964d95d8.png)
+<img width="200" src="src/img/logo-square.png"
 </p>
 
 # Baby-friendly.cz
