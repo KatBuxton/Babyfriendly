@@ -1,8 +1,4 @@
-<picture>
-  <source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/101291722/173043472-17528b65-9585-4d75-a6cb-7ace964d95d8.png"
-  <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/101291722/173043898-429dd227-b70d-4839-986c-1f597a0d7b46.png"
-  <img alt="Logo">
-</picture>
+![Logo](https://user-images.githubusercontent.com/101291722/173043472-17528b65-9585-4d75-a6cb-7ace964d95d8.png)
 
 # Baby-friendly.cz
 
