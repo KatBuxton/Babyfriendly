@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Amaranth&display=swap');
 
 .logo-img{
- background-image: url("../../img/logo-square.png");
+ background-image: var(--logo);
  background-size: cover;
  width: 100px;
  height: 100px;

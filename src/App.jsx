@@ -8,7 +8,7 @@ import { Filters } from './components/Filters';
 import { FilterSwitch } from './components/FilterSwitch';
 import { SearchBar } from './components/SearchBar';
 // import { ThemeSwitch } from './components/ThemeSwitch';
-import useLocalStorage from 'use-local-storage';
+// import useLocalStorage from 'use-local-storage';
 import data from './data.js';
 
 
@@ -22,11 +22,12 @@ function App() {
   const [filteredItems, setFilteredItems] = useState(data)
   const [searchBarActive, setSearchBarActive] = useState(false)
   const [isDesktop, setDesktop] = useState(window.innerWidth > 768);
-  const [invert, setInvert] = useState(false);
   const [q, setQ] = useState("");
+  const [invert, setInvert] = useState(false);
+  const [theme, setTheme] = useState("light")
 
-  const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
+  // const defaultDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  // const [theme, setTheme] = useLocalStorage('theme', defaultDark ? 'dark' : 'light');
 
   const switchTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
@@ -50,8 +51,6 @@ function App() {
 
   }
 
-  console.log(filtersVisible)
-
 
   useEffect(() => {
     window.addEventListener("resize", updateMedia);
@@ -67,21 +66,6 @@ function App() {
     mobileView = "container"
   }
 
-  console.log(theme)
-
-
-  // console.log(mobileView, "mobileView")
-  // console.log(filtersVisible, "filtersVisible")
-  // console.log(listViewVisible, "listViewVisible")
-  // console.log(isDesktop, "isDesktop")
-
-
-  // const filteredItems = data.filter((place) => {
-  //   if (selectedFilters.length === 0) {
-  //     return true
-  //   }
-  //   place.filters.forEach((filter) => selectedFilters.includes(filter))
-  // })
   useEffect(() => {
     const newItems = selectedFilters.length === 0 ? data : data.filter((place) => {
 
@@ -112,15 +96,15 @@ function App() {
     >
       <div className={mobileView}>
         <div className='sidebar'>
-          {/* <div className="theme-switch-wrapper">
+          <div className="theme-switch-wrapper">
             <label className="theme-switch" htmlFor="checkbox">
               <input
                 type="checkbox" id="checkbox"
                 onChange={switchTheme} />
               <div className="slider round"></div>
             </label>
-            <em></em> */}
-          {/* </div> */}
+            <em></em>
+          </div>
           {/* <ThemeSwitch
             // invert={invert}
             // setInvert={setInvert}

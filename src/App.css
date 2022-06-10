@@ -5,10 +5,8 @@
 }
 
 .App {
+  background-color: var(--background-primary);
   height: 100%;
-  background-image: linear-gradient(var(--gradient-colors));
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   color: var(--font-color); 
 }
 
@@ -57,7 +55,8 @@ display: flex;
   align-items: center;
   position: absolute;
   top:15px;
-  left:15px;
+  right:15px;
+  z-index: 1;
 }
 
 em {
@@ -99,7 +98,7 @@ em {
 }
 
 input:checked + .slider {
-  background-color: #66bb6a;
+  background-color: #00C4CC;
 }
 
 input:checked + .slider:before {

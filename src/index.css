@@ -1,16 +1,20 @@
 :root {
+  --background-primary:#ffffff;
   --gradient-colors: #FFFFFF, #E5E5E5;
   --font-color: black;
   --background-secondary: #FFFFFF;
   --marker: #7C2AE8;
   --accent: #00C4CC;
+  --logo: url("./img/logo-square.png")
 }
 [data-theme='dark'] {
+  --background-primary:#000000;
   --gradient-colors: black, #2B0163;
   --font-color: white;
   --background-secondary: #545454;
   --marker: #FFFFFF;
   --accent: #00C4CC;
+  --logo: url("./img/logo-transparent-bg.png")
 }
 
 
