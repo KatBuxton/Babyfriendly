@@ -15,8 +15,8 @@
   z-index: 1;
   margin: auto;
   justify-content: center;
-  background-color: white;
-  box-shadow: 2px 2px 2px 0px #d7d7d7;
+  background-color: var(--background-primary);
+  box-shadow: 2px 2px 2px 0px var(--shadow);
 }
 
 .view-switch:hover{
@@ -24,13 +24,14 @@
 }
 
 .view-switch:active{
-  background-color: #cccccc;
+  background-color: var(--shadow);
 }
 
 .view-switch img {
   height: 24px;
   aspect-ratio: 1/1;
   align-self: center;
+  filter: var(--filter)
 }
 
 @media (min-width: 768px) {

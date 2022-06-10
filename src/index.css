@@ -1,20 +1,35 @@
 :root {
   --background-primary:#ffffff;
   --gradient-colors: #FFFFFF, #E5E5E5;
-  --font-color: black;
+  --font-color: #121212;
   --background-secondary: #FFFFFF;
   --marker: #7C2AE8;
   --accent: #00C4CC;
-  --logo: url("./img/logo-square.png")
+  --logo: url("./img/logo-square.png");
+  --shadow: #d7d7d7;
+  --filter: invert(0);
+  --image-filter: brightness(1);
+  --marker: url("./img/pin-purple.svg");
+  --font-weight: normal;
+  --contrast: unset;
+  --grayscale: unset;
 }
+
 [data-theme='dark'] {
-  --background-primary:#000000;
+  --background-primary:#110522  ;
   --gradient-colors: black, #2B0163;
-  --font-color: white;
-  --background-secondary: #545454;
+  --font-color: rgb(235, 233, 233);
+  --background-secondary: #2b1a41;
   --marker: #FFFFFF;
   --accent: #00C4CC;
-  --logo: url("./img/logo-transparent-bg.png")
+  --logo: url("./img/logo-transparent-bg.png");
+  --shadow: none;
+  --filter: invert(1);
+  --image-filter: brightness(0.7);
+  --marker: url("./img/pin-blue.svg");
+  --font-weight: bold;
+  --contrast: contrast(150%);
+  --grayscale: grayscale(0.5);
 }
 
 

@@ -9,6 +9,8 @@ label {
   margin-bottom: 5px;
   cursor: pointer;
   font-size: 15px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: var(--font-weight);
 }
 
 label input {
@@ -44,6 +46,8 @@ ul{
 
 .group-name {
   margin-bottom: 7px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: var(--font-weight);
 }
 
 .group-name:not(:first-child) {
@@ -72,13 +76,13 @@ ul{
   border: none;
   padding:8px 32px;
   cursor:pointer;
-  box-shadow: 1.5px 1.5px 1.5px 1px #cccccc;
+  box-shadow: 1.5px 1.5px 1.5px 1px var(--shadow);
 }
 
 .btn-filters.btn-secondary{
   margin-top: 20px;
   border-radius: 5px;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--background-primary);
   color: #7C2AE8;
   font-family: "Amaranth", sans-serif;
   border: none;
@@ -92,7 +96,7 @@ ul{
   color: #C599FF;
   cursor: not-allowed;
   pointer-events: none;
-  box-shadow: 1.5px 1.5px 1.5px 1px #cccccc;
+  box-shadow: 1.5px 1.5px 1.5px 1px var(--shadow);
 }
 
 .btn-filters.btn-secondary:hover {

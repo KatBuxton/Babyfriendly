@@ -14,8 +14,8 @@
   z-index: 1;
   margin: auto;
   justify-content: center;
-  background-color: var(--background-secondary);
-  box-shadow: 2px 2px 2px 0px #d7d7d7;
+  background-color: var(--background-primary);
+  box-shadow: 2px 2px 2px 0px var(--shadow);
 }
 
 .filter-switch:hover{
@@ -23,13 +23,14 @@
 }
 
 .filter-switch:active{
-  background-color: #cccccc;
+  background-color: var(--shadow);
 }
 
 .filter-switch img {
   height: 24px;
   aspect-ratio: 1/1;
   align-self: center;
+  filter: var(--filter)
 }
 
 @media (min-width: 768px) {

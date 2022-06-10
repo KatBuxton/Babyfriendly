@@ -4,18 +4,6 @@ import data from '../../data.js';
 
 
 export const SearchBar = ({ setFilteredItems, setSearchBarActive, searchBarActive, q, setQ, setFiltersVisible, isDesktop }) => {
-  // console.log(q)
-  // const searchInput
-  // data.filter((place) => {
-  //   return place.some((newItem) => {
-  //     return (
-  //       place[newItem]
-  //         .toString()
-  //         .toLowerCase()
-  //         .indexOf(q.toLowerCase()) > -1
-  //     );
-  //   });
-  // });
 
   const handleChange = (value) => {
 

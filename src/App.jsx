@@ -39,10 +39,6 @@ function App() {
     setDesktop(window.innerWidth > 768);
   };
 
-  // useEffect(() => {
-  //   console.log(q)
-  // }, [q])
-
   const handleFiltersVisible = (filtersVisible) => {
     setQ("")
     setFiltersVisible(filtersVisible)
@@ -70,11 +66,13 @@ function App() {
     const newItems = selectedFilters.length === 0 ? data : data.filter((place) => {
 
       const placesCategory = ["cafe", "restaurant", "outdoors", "playroom", "babysitting", "other"]
+
       const categorySelected = selectedFilters.some(filter => placesCategory.includes(filter));
+
       const placeType = categorySelected ? selectedFilters.includes(place.category) : true;
 
-      // const filteredSelectedItems = selectedFilters.filter(filter => filter !== "cafe" && filter !== "restaurant" && filter !== "outdoors" && filter !== "playroom" && filter !== "babysitting" && filter !== "other")
       const filteredSelectedItems = selectedFilters.filter(filter => !placesCategory.includes(filter))
+
       const containsAll = filteredSelectedItems.every(filter => {
         return place.filters.includes(filter);
       });

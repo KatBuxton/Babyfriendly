@@ -9,8 +9,9 @@
   align-items: flex-end;
   border-radius: 10px;
   margin-bottom: 10px;
-  box-shadow: 2px 2px 2px 0px #d7d7d7;
+  box-shadow: 2px 2px 2px 0px var(--shadow);
   cursor:pointer;
+  filter: var(--image-filter);
 }
 
 .list-item:active {
@@ -26,6 +27,8 @@
   background-color: var(--background-secondary);
   border-radius: 0 0 10px 10px;
   width: 100%;
+  filter: none;
+  font-weight: var(--font-weight);
 }
 
 .list-item__name,.list-item__address {

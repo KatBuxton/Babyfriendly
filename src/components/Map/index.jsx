@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import "./style.css";
 import 'mapbox-gl/dist/mapbox-gl.css';
 import ReactMapGL, { Marker, Popup, NavigationControl, FlyToInterpolator } from 'react-map-gl';
-import pinUrl from '../../img/pin.svg';
+// import pinUrl from '../../img/pin.svg';
 import globeUrl from '../../img/globe.svg';
 import facebookUrl from '../../img/facebook.svg';
 import instagramUrl from '../../img/instagram.svg';
@@ -49,7 +49,7 @@ export const Map = ({ selectedLocation, filteredItems, setSelectedLocation, inve
     }
   }, [selectedLocation]);
 
-  const invertStyle = invert ? { filter: "invert(100%)" } : undefined;
+  const invertStyle = invert ? { filter: "invert(0.95) grayscale(0.5)" } : undefined;
 
   const navControlStyle = {
     right: 10,
@@ -57,11 +57,10 @@ export const Map = ({ selectedLocation, filteredItems, setSelectedLocation, inve
   }
 
   return (
-    <div className="map"
-      style={invertStyle}
-    >
+    <div className="map">
       <ReactMapGL
         {...viewport}
+        style={invertStyle}
         width="100%"
         height="100%"
         onViewportChange={(nextViewport) => setViewport(nextViewport)}
@@ -96,7 +95,7 @@ export const Map = ({ selectedLocation, filteredItems, setSelectedLocation, inve
             key={place.index}>
             <button className="marker-button"
               onClick={() => setSelectedLocation(place)}>
-              <img src={pinUrl} width={50} height={50} alt={place.name} />
+              {/* <img src={pinUrl} width={50} height={50} alt={place.name} /> */}
             </button>
           </Marker>
         )}
@@ -170,8 +169,7 @@ export const Map = ({ selectedLocation, filteredItems, setSelectedLocation, inve
           <a
             href="https://www.instagram.com/baby_friendly_cz/"
             target="_blank"
-            rel="noreferrer"
-            className="social-link">
+            rel="noreferrer">
             Pro víc inspirace<br></br>sledujte<br></br>
             <img src={instagramUrl} alt="ikona instagram" />
             <br></br>@baby_friendly_cz

@@ -4,13 +4,23 @@
 	overflow: hidden;
 }
 
+.mapboxgl-popup-content{
+	border-radius: 30px;
+}
+
 .marker-button {
+	background-image: var(--marker);
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-size: contain;
+	width: 50px;
+	height: 50px;
 	padding: 0;
 	border: none;
-	background-color: transparent;
 	display: flex;
 	outline: none;
 	cursor: pointer;
+	filter: var(--filter) var(--contrast);
 }
 
 
@@ -21,19 +31,22 @@
   justify-content: center;
 	text-align: center;
 	min-width: 150px;
+	filter: var(--filter) var(--contrast);
+	font-family: 'Open Sans', sans-serif;
 }
 
+
 .address {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   margin-bottom: 5px;
 	margin-left: 30px;
 	margin-right: 30px;
-
+	font-weight: bold;
 }
 
 .place-name {
   font-family: "Amaranth", sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin-bottom: 10px;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -41,19 +54,21 @@
 
 .category-name {	
  color: white;
+ font-weight: bold;
  background-color: #7C2AE8;
  border-radius: 10px;
  width: fit-content;
  height: auto;
- padding: 3px 10px 3px 10px;
+ padding: 3px 13px 3px 13px;
  font-size: smaller;
  margin: auto;
- margin-bottom: 20px;
+ margin-bottom: 10px;
 }
 
 .equipment {
 	font-size: 0.7rem;
 	margin-bottom: 3px;
+	font-weight: bold;
 }
 
 .popup .babysitting{
@@ -62,6 +77,7 @@
 	width: 100%;
 	aspect-ratio: 5 / 2;
 	margin-bottom: 5px;
+	filter: var(--image-filter);
 }
 
 .popup .cafe{
@@ -70,6 +86,7 @@
 	width: 100%;
 	aspect-ratio: 5 / 2;
 	margin-bottom: 5px;
+	filter: var(--image-filter);
 }
 
 .popup .restaurant{
@@ -78,6 +95,7 @@
 	width: 100%;
 	aspect-ratio: 5 / 2;
 	margin-bottom: 5px;
+	filter: var(--image-filter) ;
 }
 
 .popup .outdoors{
@@ -86,6 +104,7 @@
 	width: 100%;
 	aspect-ratio: 5 / 2;
 	margin-bottom: 5px;
+	filter: var(--image-filter);
 }
 
 .popup .other{
@@ -94,6 +113,7 @@
 	width: 100%;
 	aspect-ratio: 5 / 2;
 	margin-bottom: 5px;
+	filter: var(--image-filter);
 }
 
 .popup .playroom{
@@ -102,10 +122,12 @@
 	width: 100%;
 	aspect-ratio: 5 / 2;
 	margin-bottom: 5px;
+	filter: var(--image-filter);
 }
 
 .social-link{
 	margin-top: 10px;
+	filter: var(--filter);
 }
 
 .mapboxgl-popup-close-button {
@@ -123,6 +145,7 @@
 	border-radius: 10px;
 	padding: 10px;
 	font-weight: bold;
+	font-family: 'Open Sans', sans-serif;
 }
 
 a:link{
