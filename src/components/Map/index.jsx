@@ -1,8 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import "./style.css";
+import './style.css';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import ReactMapGL, { Marker, Popup, NavigationControl, FlyToInterpolator } from 'react-map-gl';
-// import pinUrl from '../../img/pin.svg';
 import globeUrl from '../../img/globe.svg';
 import facebookUrl from '../../img/facebook.svg';
 import instagramUrl from '../../img/instagram.svg';
@@ -10,51 +9,48 @@ import instagramUrl from '../../img/instagram.svg';
 const initialCoords = {
   latitude: 50.08854,
   longitude: 14.42991,
-  zoom: 13
-}
+  zoom: 13,
+};
 
 export const Map = ({ selectedLocation, filteredItems, setSelectedLocation, invert }) => {
-  const [viewport, setViewport] = useState(initialCoords)
+  const [viewport, setViewport] = useState(initialCoords);
 
-  const notInitialRender = useRef(false)
+  const notInitialRender = useRef(false);
 
   useEffect(() => {
-
     if (notInitialRender.current) {
       if (filteredItems.length > 0) {
         setViewport({
           latitude: filteredItems[0].latitude,
           longitude: filteredItems[0].longitude,
           zoom: 13,
-          transitionDuration: "auto",
+          transitionDuration: 'auto',
           transitionInterpolator: new FlyToInterpolator(),
         });
       }
-    }
-    else {
-      notInitialRender.current = true
+    } else {
+      notInitialRender.current = true;
     }
   }, [filteredItems]);
 
   useEffect(() => {
-    console.log(selectedLocation)
     if (selectedLocation) {
       setViewport({
         latitude: selectedLocation.latitude,
         longitude: selectedLocation.longitude,
         zoom: 13,
-        transitionDuration: "auto",
+        transitionDuration: 'auto',
         transitionInterpolator: new FlyToInterpolator(),
       });
     }
   }, [selectedLocation]);
 
-  const invertStyle = invert ? { filter: "invert(0.95) grayscale(0.5)" } : undefined;
+  const invertStyle = invert ? { filter: 'invert(0.95) grayscale(0.5)' } : undefined;
 
   const navControlStyle = {
     right: 10,
     bottom: 40,
-  }
+  };
 
   return (
     <div className="map">
@@ -86,90 +82,76 @@ export const Map = ({ selectedLocation, filteredItems, setSelectedLocation, inve
           ],
         }}
       >
-        {filteredItems.map((place) =>
+        {filteredItems.map((place) => (
           <Marker
             latitude={place.latitude}
             longitude={place.longitude}
             offsetLeft={-25}
             offsetTop={-50}
-            key={place.index}>
-            <button className="marker-button"
-              onClick={() => setSelectedLocation(place)}>
-              {/* <img src={pinUrl} width={50} height={50} alt={place.name} /> */}
-            </button>
+            key={place.index}
+          >
+            <button className="marker-button" onClick={() => setSelectedLocation(place)}></button>
           </Marker>
-        )}
-        {selectedLocation &&
-          <div className='popup-wrapper'>
+        ))}
+        {selectedLocation && (
+          <div className="popup-wrapper">
             <Popup
               latitude={selectedLocation.latitude}
               longitude={selectedLocation.longitude}
               key={selectedLocation.index}
               offsetTop={-60}
-              onClose={() => setSelectedLocation(null)}>
-              <div className='popup'>
-                <div className={selectedLocation.category}>
-                </div>
-                <div className="address">
-                  {selectedLocation.address}
-                </div>
-                <div className="place-name">
-                  {selectedLocation.name}
-                </div>
-                <div className="category-name">
-                  {selectedLocation.categoryName}
-                </div>
-                {selectedLocation.changingStation === true
-                  ? <div className="equipment">
-                    Přebalovací pult
-                  </div>
-                  : null}
-                {selectedLocation.mat === true
-                  ? <div className="equipment">
-                    Čistý koberec/podložka
-                  </div>
-                  : null}
-                {selectedLocation.barrierFree === true
-                  ? <div className="equipment">
-                    Bez bariér
-                  </div>
-                  : null}
-                {selectedLocation.instagram !== null
-                  ? <a
+              onClose={() => setSelectedLocation(null)}
+            >
+              <div className="popup">
+                <div className={selectedLocation.category}></div>
+                <div className="address">{selectedLocation.address}</div>
+                <div className="place-name">{selectedLocation.name}</div>
+                <div className="category-name">{selectedLocation.categoryName}</div>
+                {selectedLocation.changingStation === true ? (
+                  <div className="equipment">Přebalovací pult</div>
+                ) : null}
+                {selectedLocation.mat === true ? (
+                  <div className="equipment">Čistý koberec/podložka</div>
+                ) : null}
+                {selectedLocation.barrierFree === true ? (
+                  <div className="equipment">Bez bariér</div>
+                ) : null}
+                {selectedLocation.instagram !== null ? (
+                  <a
                     href={selectedLocation.instagram}
                     target="_blank"
                     rel="noreferrer"
-                    className="social-link">
+                    className="social-link"
+                  >
                     <img src={instagramUrl} alt="ikona instagram" />
                   </a>
-                  : null}
-                {selectedLocation.facebook !== null
-                  ? <a
+                ) : null}
+                {selectedLocation.facebook !== null ? (
+                  <a
                     href={selectedLocation.facebook}
                     target="_blank"
                     rel="noreferrer"
-                    className="social-link">
+                    className="social-link"
+                  >
                     <img src={facebookUrl} alt="ikona facebooku" />
                   </a>
-                  : null}
-                {selectedLocation.web !== null
-                  ? <a
+                ) : null}
+                {selectedLocation.web !== null ? (
+                  <a
                     href={selectedLocation.web}
                     target="_blank"
                     rel="noreferrer"
-                    className="social-link">
+                    className="social-link"
+                  >
                     <img src={globeUrl} alt="ikona globu" />
                   </a>
-                  : null}
+                ) : null}
               </div>
             </Popup>
           </div>
-        }
-        <div className='instagram'>
-          <a
-            href="https://www.instagram.com/baby_friendly_cz/"
-            target="_blank"
-            rel="noreferrer">
+        )}
+        <div className="instagram">
+          <a href="https://www.instagram.com/baby_friendly_cz/" target="_blank" rel="noreferrer">
             Pro víc inspirace<br></br>sledujte<br></br>
             <img src={instagramUrl} alt="ikona instagram" />
             <br></br>@baby_friendly_cz
@@ -177,6 +159,6 @@ export const Map = ({ selectedLocation, filteredItems, setSelectedLocation, inve
         </div>
         <NavigationControl style={navControlStyle} showZoom={true} />
       </ReactMapGL>
-    </div >
-  )
-}
+    </div>
+  );
+};
