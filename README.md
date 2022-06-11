@@ -15,7 +15,7 @@ This web was created as a final projext for [Czechitas Digital Academy](https://
 
 ### Built with
 
-[React.js](https://reactjs.org/), JavaScript, CSS, HTML
+[React.js](https://reactjs.org/), JavaScript, CSS, HTML, Netlify
   
 ### Features
   
