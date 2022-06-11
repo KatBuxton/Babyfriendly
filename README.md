@@ -9,7 +9,7 @@ Map of baby-friendly places in Prague & Czech Republic www.baby-friendly.cz
 ## About the project
 ### Background
 
-Going out for a coffee or lunch can sometimes be a bit of a hassle. As parents, we realise that sometimes it takes a while to search the depths of the internet to find a place where your kids, and therefore you, will be able to have a good time. That’s why I decided to create a user-friendly web app where anyone can easily search for an establishment with the use of baby-specific filters. 
+Going out for a coffee or lunch with kids can sometimes be a bit of a hassle. As parents, we realise that sometimes it takes a while to search the depths of the internet to find a place where your kids, and therefore you, will be able to have a good time. That’s why I decided to create a user-friendly web app where anyone can easily search for an establishment with the use of baby-specific filters. 
 
 This web was created as a final projext for [Czechitas Digital Academy](https://www.czechitas.cz/kurzy/digitalni-akademie-web), however I am striving to continue developing it to serve as many parents as possible. 
 
