@@ -16,6 +16,11 @@ This web was created as a final projext for Czechitas Digital Academy, however I
 ### Built with
 
 [React.js](https://reactjs.org/), JavaScript, CSS, HTML
+  
+### Features
+  
+![desktop screenshots](https://user-images.githubusercontent.com/101291722/173179925-bb2f23b0-478c-4b03-b6a3-5c773d84be02.png)
+![mobile screenshots](https://user-images.githubusercontent.com/101291722/173179935-6d8ebfd4-ff95-4ec8-b6c6-3eae1b67faac.png)
 
 ## Installation
 
