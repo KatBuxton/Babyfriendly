@@ -48,4 +48,6 @@ Other resources used:
 - [A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - [Iconmonstr](https://iconmonstr.com/)
 
-A big thank you goes to my mentors and tutors who shared their expertise and dedicated a lot of time to answering my questions and coming up with working solutions.  
+A big thank you goes to my mentors and tutors who shared their expertise and dedicated a lot of time to answering my questions and coming up with working solutions. 
+  
+  [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
