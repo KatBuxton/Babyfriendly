@@ -1,19 +1,17 @@
 import React from 'react';
 import mapIconUrl from '../../img/map.svg';
 import listIconUrl from '../../img/list.svg';
-import "./style.css";
-
+import './style.css';
 
 export const ViewSwitch = ({ listViewVisible, setListViewVisible }) => {
-
   return (
-    <div className='wrapper-ws'>
-      <div className="view-switch"
-        onClick={() => setListViewVisible(!listViewVisible)}
-      >
-        <img src={listViewVisible === true ? mapIconUrl : listIconUrl} alt={listViewVisible === true ? "ikona seznamu" : "ikona mapy"} />
-      </div >
+    <div className="wrapper-ws">
+      <div className="view-switch" onClick={() => setListViewVisible(!listViewVisible)}>
+        <img
+          src={listViewVisible === true ? mapIconUrl : listIconUrl}
+          alt={listViewVisible === true ? 'ikona seznamu' : 'ikona mapy'}
+        />
+      </div>
     </div>
-  )
-}
-
+  );
+};
