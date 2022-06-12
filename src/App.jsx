@@ -89,7 +89,13 @@ function App() {
     <div className="App" data-theme={theme}>
       <div className={mobileView}>
         <div className="sidebar">
-          <ThemeSwitch invert={invert} setInvert={setInvert} theme={theme} setTheme={setTheme} />
+          <ThemeSwitch
+            invert={invert}
+            setInvert={setInvert}
+            theme={theme}
+            setTheme={setTheme}
+            filtersVisible={filtersVisible}
+          />
           {isDesktop ? (
             <>
               <Logo />
