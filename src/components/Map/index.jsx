@@ -103,7 +103,10 @@ export const Map = ({ selectedLocation, filteredItems, setSelectedLocation, inve
               onClose={() => setSelectedLocation(null)}
             >
               <div className="popup">
-                <div className={selectedLocation.category}></div>
+                <div
+                  className={selectedLocation.category}
+                  style={{ backgroundImage: `url(${selectedLocation.preview})` }}
+                ></div>
                 <div className="address">{selectedLocation.address}</div>
                 <div className="place-name">{selectedLocation.name}</div>
                 <div className="category-name">{selectedLocation.categoryName}</div>
@@ -116,36 +119,38 @@ export const Map = ({ selectedLocation, filteredItems, setSelectedLocation, inve
                 {selectedLocation.barrierFree === true ? (
                   <div className="equipment">Bez bariér</div>
                 ) : null}
-                {selectedLocation.instagram !== null ? (
-                  <a
-                    href={selectedLocation.instagram}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="social-link"
-                  >
-                    <img src={instagramUrl} alt="ikona instagram" />
-                  </a>
-                ) : null}
-                {selectedLocation.facebook !== null ? (
-                  <a
-                    href={selectedLocation.facebook}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="social-link"
-                  >
-                    <img src={facebookUrl} alt="ikona facebooku" />
-                  </a>
-                ) : null}
-                {selectedLocation.web !== null ? (
-                  <a
-                    href={selectedLocation.web}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="social-link"
-                  >
-                    <img src={globeUrl} alt="ikona globu" />
-                  </a>
-                ) : null}
+                <div className="social-icons">
+                  {selectedLocation.instagram !== null ? (
+                    <a
+                      href={selectedLocation.instagram}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="social-link"
+                    >
+                      <img src={instagramUrl} alt="ikona instagram" />
+                    </a>
+                  ) : null}
+                  {selectedLocation.facebook !== null ? (
+                    <a
+                      href={selectedLocation.facebook}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="social-link"
+                    >
+                      <img src={facebookUrl} alt="ikona facebooku" />
+                    </a>
+                  ) : null}
+                  {selectedLocation.web !== null ? (
+                    <a
+                      href={selectedLocation.web}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="social-link"
+                    >
+                      <img src={globeUrl} alt="ikona globu" />
+                    </a>
+                  ) : null}
+                </div>
               </div>
             </Popup>
           </div>

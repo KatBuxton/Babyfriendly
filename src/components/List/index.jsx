@@ -16,6 +16,7 @@ export const List = ({ filteredItems, setSelectedLocation, setListViewVisible })
           address={place.address}
           key={place.index}
           category={place.category}
+          preview={place.preview}
           handleClick={() => handleClick(place)}
         />
       ))}

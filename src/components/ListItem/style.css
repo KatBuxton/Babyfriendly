@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 .list-item {
-  background-image: url("../../img/placeholders/restaurant.png");
+  background-image: url('../../img/placeholders/restaurant.png');
   background-size: cover;
   min-height: 170px;
   width: 100%;
@@ -10,13 +10,13 @@
   border-radius: 10px;
   margin-bottom: 10px;
   box-shadow: 2px 2px 2px 0px var(--shadow);
-  cursor:pointer;
+  cursor: pointer;
   filter: var(--image-filter);
 }
 
 .list-item:active {
-  position:relative;
-	top:1px;
+  position: relative;
+  top: 1px;
 }
 
 .list-item__info {
@@ -31,7 +31,8 @@
   font-weight: var(--font-weight);
 }
 
-.list-item__name,.list-item__address {
+.list-item__name,
+.list-item__address {
   margin-left: 10px;
   margin-top: 7px;
   margin-bottom: 7px;
@@ -41,26 +42,33 @@
   font-size: smaller;
 }
 
-.babysitting.list-item{
-  background-image: url("../../img/placeholders/babysitting.png");
+.babysitting.list-item {
+  background-image: url('../../img/placeholders/babysitting.png');
+  background-position: center;
 }
 
-.cafe.list-item{
-  background-image: url("../../img/placeholders/cafe.png");
+.cafe.list-item {
+  /* background-image: url('../../img/placeholders/cafe.png'); */
+  /* background-image: url('https://scontent.fprg5-1.fna.fbcdn.net/v/t39.30808-6/283674615_526150395860566_8153151709648033473_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=a26aad&_nc_ohc=HwqsrVXY5PAAX8heYY5&_nc_ht=scontent.fprg5-1.fna&oh=00_AT862UcshKDqWqO3eU50854YZuzgx1FkrzO5QacWElmYVQ&oe=62B76FFD'); */
+  background-position: center;
 }
 
-.restaurant.list-item{
-  background-image: url("../../img/placeholders/restaurant.png");
+.restaurant.list-item {
+  background-image: url('../../img/placeholders/restaurant.png');
+  background-position: center;
 }
 
-.outdoors.list-item{
-  background-image: url("../../img/placeholders/outdoors.png");
+.outdoors.list-item {
+  background-image: url('../../img/placeholders/outdoors.png');
+  background-position: center;
 }
 
-.other.list-item{
-  background-image: url("../../img/placeholders/other.png");
+.other.list-item {
+  background-image: url('../../img/placeholders/other.png');
+  background-position: center;
 }
 
-.playroom.list-item{
-  background-image: url("../../img/placeholders/playroom.png");
+.playroom.list-item {
+  background-image: url('../../img/placeholders/playroom.png');
+  background-position: center;
 }

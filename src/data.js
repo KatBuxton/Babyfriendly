@@ -14,6 +14,8 @@ const data = [
     mat: true,
     barrierFree: false,
     filters: ['mat', 'inside'],
+    preview:
+      'https://scontent.fprg5-1.fna.fbcdn.net/v/t39.30808-6/283674615_526150395860566_8153151709648033473_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=a26aad&_nc_ohc=HwqsrVXY5PAAX8heYY5&_nc_ht=scontent.fprg5-1.fna&oh=00_AT862UcshKDqWqO3eU50854YZuzgx1FkrzO5QacWElmYVQ&oe=62B76FFD',
   },
   {
     index: '#2',
@@ -30,6 +32,8 @@ const data = [
     mat: true,
     barrierFree: false,
     filters: ['mat', 'inside'],
+    preview:
+      'https://scontent.fprg5-1.fna.fbcdn.net/v/t39.30808-6/282704160_2190354907800564_3658729860871365946_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=e3f864&_nc_ohc=rfFwsP6t7uoAX_-eioy&_nc_ht=scontent.fprg5-1.fna&oh=00_AT9AcIKZ1IkGF7A1Mth-FEaNyMyyWjQJDuCLm3kfwgbLeA&oe=62B6FCDD',
   },
   {
     index: '#3',
@@ -46,6 +50,8 @@ const data = [
     mat: false,
     barrierFree: true,
     filters: ['barrier-free', 'outside'],
+    preview:
+      'https://scontent.fprg5-1.fna.fbcdn.net/v/t39.30808-6/278510808_518433836579807_2609349407805903067_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=a26aad&_nc_ohc=26OehcSXdNUAX9E9YH6&_nc_ht=scontent.fprg5-1.fna&oh=00_AT-n9xsBKj7Qtn2o0f6_tpHE3YfN0xsEW8Lm3TMfFLzvqA&oe=62B76E57',
   },
   {
     index: '#4',
@@ -62,6 +68,8 @@ const data = [
     mat: true,
     barrierFree: true,
     filters: ['mat', 'barrier-free', 'changing-station', 'inside'],
+    preview:
+      'https://scontent.fprg5-1.fna.fbcdn.net/v/t1.6435-9/54383122_581455345674304_7774883759249162240_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=730e14&_nc_ohc=HgtMwtcPBSIAX8izQ1L&tn=Gr987PSlSqfpILEh&_nc_ht=scontent.fprg5-1.fna&oh=00_AT-kJWYn-kFtGgTJUjbxI0EyVW9zcprt1Gu09TRRnBur8w&oe=62D94B38',
   },
   {
     index: '#5',
@@ -78,6 +86,8 @@ const data = [
     mat: true,
     barrierFree: false,
     filters: ['mat', 'changing-station', 'inside'],
+    preview:
+      'https://scontent.fprg5-1.fna.fbcdn.net/v/t1.18169-9/19366076_1100726603393444_1245016200803572692_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=e3f864&_nc_ohc=ksIjPci6sjQAX-iVAq3&tn=Gr987PSlSqfpILEh&_nc_ht=scontent.fprg5-1.fna&oh=00_AT85KCpgy300pq3ianr3Wmg3eYCMZZvr47AF1WyCaqSYsg&oe=62D7707F',
   },
   {
     index: '#6',
@@ -94,6 +104,8 @@ const data = [
     mat: false,
     barrierFree: true,
     filters: ['barrier-free', 'changing-station', 'inside', 'outside'],
+    preview:
+      'https://scontent.fprg5-1.fna.fbcdn.net/v/t39.30808-6/277757669_187308420289682_2259651779443572067_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_ohc=xJsiVfZDXwYAX_pXeY5&_nc_ht=scontent.fprg5-1.fna&oh=00_AT8YP-L69XOUBO7ZEWGp5-mFkfjcRwqzRxSkp6uX4hvqWQ&oe=62B80710',
   },
   {
     index: '#7',
@@ -110,6 +122,8 @@ const data = [
     mat: false,
     barrierFree: true,
     filters: ['barrier-free', 'changing-station', 'outside'],
+    preview:
+      'https://scontent.fprg5-1.fna.fbcdn.net/v/t39.30808-6/277565623_1320125115127490_4448882984014882021_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=RA_qIc68HkMAX-yTRNw&tn=Gr987PSlSqfpILEh&_nc_ht=scontent.fprg5-1.fna&oh=00_AT9Y7n59oxQtSGq9aStMEwn1pHbPdkv3DAqToPX2lInNWw&oe=62B7F738',
   },
   {
     index: '#8',
@@ -126,6 +140,8 @@ const data = [
     mat: true,
     barrierFree: false,
     filters: ['mat', 'changing-station', 'inside'],
+    preview:
+      'https://scontent.fprg5-1.fna.fbcdn.net/v/t1.6435-9/31960012_2030735467175325_9156934523487780864_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=_bIYjZJXPaUAX_Uzzp6&tn=Gr987PSlSqfpILEh&_nc_ht=scontent.fprg5-1.fna&oh=00_AT_YhdKzTk_4i6t4p-hxHgNDa2efGRLCXxazc8ocnsQ8rw&oe=62D8B737',
   },
   {
     index: '#9',
@@ -142,6 +158,8 @@ const data = [
     mat: true,
     barrierFree: false,
     filters: ['mat', 'changing-station', 'inside'],
+    preview:
+      'https://scontent.fprg5-1.fna.fbcdn.net/v/t1.6435-9/59900982_333067027395005_6241408150554017792_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=x2Cl9j8yv50AX9SYqRx&_nc_ht=scontent.fprg5-1.fna&oh=00_AT94vq-RoHG-7czhRaayXrNjIGKMKf9JyW_2RZWuhE8R_A&oe=62D73B70',
   },
   {
     index: '#10',
@@ -158,6 +176,8 @@ const data = [
     mat: false,
     barrierFree: false,
     filters: ['outside'],
+    preview:
+      'https://scontent.fprg5-1.fna.fbcdn.net/v/t39.30808-6/277776237_5009472802433716_6805793106411054307_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=hUOr29bTd14AX-pvbfj&_nc_ht=scontent.fprg5-1.fna&oh=00_AT-oLCNKLetZm6ujh2K-NMwEk-40sTagynmVlw_36fUoHg&oe=62B7E20D',
   },
   {
     index: '#11',
@@ -168,12 +188,14 @@ const data = [
     category: 'outdoors',
     categoryName: 'Místo s venkovním hřištěm',
     instagram: null,
-    facebook: null,
+    facebook: 'https://www.facebook.com/restauraceapenzionkorab',
     web: 'http://www.restauracekorab.cz/',
     changingStation: true,
     mat: false,
     barrierFree: true,
     filters: ['changing-station', 'barrier-free', 'outside'],
+    preview:
+      'https://scontent.fprg5-1.fna.fbcdn.net/v/t1.6435-9/34300140_1720625431360478_602067793998774272_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=e3f864&_nc_ohc=H57HaO15EOoAX-JzULL&_nc_ht=scontent.fprg5-1.fna&oh=00_AT-3z0dJawbdoO7f81kPWAFm2djueivnSIHg0BlHmPGFnA&oe=62D9A14F',
   },
   {
     index: '#12',
@@ -184,12 +206,14 @@ const data = [
     category: 'outdoors',
     categoryName: 'Místo s venkovním hřištěm',
     instagram: 'https://www.instagram.com/hotelpeklo/',
-    facebook: null,
+    facebook: 'https://www.facebook.com/hotelpekloprodeti',
     web: null,
     changingStation: true,
     mat: true,
     barrierFree: true,
     filters: ['changing-station', 'barrier-free', 'mat', 'outside', 'inside'],
+    preview:
+      'https://scontent.fprg5-1.fna.fbcdn.net/v/t1.6435-9/116081898_112714883860999_2164942898417494814_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=e3f864&_nc_ohc=0MlI_NlGHdIAX9ny0Hq&_nc_ht=scontent.fprg5-1.fna&oh=00_AT8LyxgseMNXEEC9kejQ80cTWtq4v6GyzqTd8vknq0ACiQ&oe=62D9361B',
   },
   {
     index: '#13',
@@ -200,12 +224,14 @@ const data = [
     category: 'restaurant',
     categoryName: 'Restaurace s koutkem',
     instagram: 'https://www.instagram.com/hotelperlajizery/',
-    facebook: null,
+    facebook: 'https://www.facebook.com/HotelPerlaJizery',
     web: null,
     changingStation: false,
     mat: false,
     barrierFree: false,
     filters: ['inside'],
+    preview:
+      'https://scontent.fprg5-1.fna.fbcdn.net/v/t1.18169-9/23031325_1432927300089392_3033037673758712321_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=cdbe9c&_nc_ohc=PujOSixpaysAX-8CAn2&_nc_ht=scontent.fprg5-1.fna&oh=00_AT_N-WSXRcb1dTwPyC4IFfAosiwKa8WnFp2Z_vj7lWrWcg&oe=62D8F2FF',
   },
   {
     index: '#14',
@@ -216,12 +242,14 @@ const data = [
     category: 'restaurant',
     categoryName: 'Restaurace s koutkem',
     instagram: 'https://www.instagram.com/prezidentska/',
-    facebook: null,
+    facebook: 'https://www.facebook.com/prezidentska/',
     web: null,
     changingStation: false,
     mat: false,
     barrierFree: false,
     filters: ['inside'],
+    preview:
+      'https://scontent.fprg5-1.fna.fbcdn.net/v/t39.30808-6/275106426_4790256864424506_1537260564281454431_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=730e14&_nc_ohc=qKl9lW8520oAX9Hd0l2&_nc_ht=scontent.fprg5-1.fna&oh=00_AT-wW1VvxgkYwi1xQrpW36Nkes5_3swGsdUXPrylvoT1fQ&oe=62B83E8D',
   },
   {
     index: '#15',
@@ -232,12 +260,14 @@ const data = [
     category: 'outdoors',
     categoryName: 'Místo s venkovním hřištěm',
     instagram: null,
-    facebook: null,
+    facebook: 'https://www.facebook.com/PivovarskaRestaurace',
     web: 'https://restaurantpivovarska.cz/',
     changingStation: false,
     mat: false,
     barrierFree: true,
     filters: ['outside', 'barrier-free'],
+    preview:
+      'https://scontent.fprg5-1.fna.fbcdn.net/v/t39.30808-6/286695248_5242146212540852_754836588959734999_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=7AkkjV5_644AX_DyIvB&_nc_oc=AQm1ZBde2PJPThx_jSFJWyOcaqbZVwI552xE06V-F5o_dGFwKzVsn2DZXLL5Tdrz1GI&_nc_ht=scontent.fprg5-1.fna&oh=00_AT-CpHQqtQbJp11FiUZ2iq6GcAwTf6qQUS_cEOMlCP4NLA&oe=62B737F4',
   },
   {
     index: '#16',
@@ -248,12 +278,14 @@ const data = [
     category: 'restaurant',
     categoryName: 'Restaurace s koutkem',
     instagram: 'https://www.restauracesalanda.cz/cs/salanda/pankrac/',
-    facebook: null,
+    facebook: 'https://www.facebook.com/salandapankrac',
     web: null,
     changingStation: false,
     mat: false,
     barrierFree: true,
     filters: ['inside', 'barrier-free'],
+    preview:
+      'https://scontent.fprg5-1.fna.fbcdn.net/v/t1.6435-9/72580112_136323641088568_1449175742955913216_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=e3f864&_nc_ohc=dojczLp-ITgAX_DZF91&_nc_ht=scontent.fprg5-1.fna&oh=00_AT__jGyYxk_V4B_qiaz52U5nQsXPcFexTSl8InLVc69SqA&oe=62D908E2',
   },
   {
     index: '#17',
@@ -264,12 +296,14 @@ const data = [
     category: 'restaurant',
     categoryName: 'Restaurace s koutkem',
     instagram: null,
-    facebook: null,
+    facebook: 'https://www.facebook.com/klempirna',
     web: 'http://www.klempirna-restaurant.cz/',
     changingStation: false,
     mat: false,
     barrierFree: false,
     filters: ['inside'],
+    preview:
+      'https://scontent.fprg5-1.fna.fbcdn.net/v/t39.30808-6/281856172_5006306446154076_8772553492364500438_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=730e14&_nc_ohc=lqU7XlitGL4AX9OL5K9&_nc_ht=scontent.fprg5-1.fna&oh=00_AT8B7S2JHAq3ikRHhTsO3O2SXZc2N3c9kbHg9f6SX4gXmQ&oe=62B7A6AF',
   },
   {
     index: '#18',
@@ -280,12 +314,14 @@ const data = [
     category: 'restaurant',
     categoryName: 'Restaurace s koutkem',
     instagram: null,
-    facebook: null,
+    facebook: 'https://www.facebook.com/%C4%8C%C3%ADnsk%C3%A1-Restaurace-Dragon-109188761644736',
     web: 'https://dragonrestaurace.cz/',
     changingStation: false,
     mat: false,
     barrierFree: false,
     filters: ['inside'],
+    preview:
+      'https://scontent.fprg5-1.fna.fbcdn.net/v/t39.30808-6/279327262_150186434211635_8638741514817083093_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=Dp98_C1GuFMAX_Ih6pm&tn=Gr987PSlSqfpILEh&_nc_ht=scontent.fprg5-1.fna&oh=00_AT_nuaEH28uKl16QoCgZZQnTIwpdzsWpNwa1a4ArJ6CRZg&oe=62B87861',
   },
   {
     index: '#19',
@@ -296,12 +332,14 @@ const data = [
     category: 'restaurant',
     categoryName: 'Restaurace s koutkem',
     instagram: 'https://www.instagram.com/banhmimakers/?hl=cs',
-    facebook: null,
+    facebook: 'https://www.facebook.com/B%C3%A1nh-M%C3%AC-Makers-102218924676452',
     web: null,
     changingStation: false,
     mat: false,
     barrierFree: false,
     filters: ['inside'],
+    preview:
+      'https://scontent.fprg5-1.fna.fbcdn.net/v/t1.6435-9/121489337_2738957836322222_1125679239024111918_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=a26aad&_nc_ohc=2GWh2z6TY5cAX_mtI5J&_nc_ht=scontent.fprg5-1.fna&oh=00_AT-lP9IPKtVTOX7umcsy37eoWDThGh6I1Tk5IQVICsdTUQ&oe=62D90C4F',
   },
   {
     index: '#20',
@@ -318,6 +356,8 @@ const data = [
     mat: false,
     barrierFree: false,
     filters: ['inside'],
+    preview:
+      'https://scontent.fprg5-1.fna.fbcdn.net/v/t39.30808-6/278229040_392812719516223_2923217465461085766_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=e3f864&_nc_ohc=9XzdACC3FswAX-AOS52&tn=Gr987PSlSqfpILEh&_nc_ht=scontent.fprg5-1.fna&oh=00_AT9xI1EshxESBh9HEv4dClTe8kEvBvOLEabCg9N1Uco4zg&oe=62B863EB',
   },
   {
     index: '#21',
@@ -328,12 +368,15 @@ const data = [
     category: 'cafe',
     categoryName: 'Kavárna s koutkem',
     instagram: 'https://www.instagram.com/erhartovacukrarna/?hl=cs',
-    facebook: null,
+    facebook:
+      'https://www.facebook.com/Erhartova-Cukr%C3%A1rna-ofici%C3%A1ln%C3%AD-str%C3%A1nka-106005897964334',
     web: null,
     changingStation: false,
     mat: false,
     barrierFree: false,
     filters: ['inside'],
+    preview:
+      'https://scontent.fprg5-1.fna.fbcdn.net/v/t1.6435-9/100046979_2881628158539401_9094049497830391808_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=e3f864&_nc_ohc=BDXcS1CVTygAX-b-bsd&_nc_ht=scontent.fprg5-1.fna&oh=00_AT8fflOYjulsVtIWLtH8pHMUkNFpip3hE9EW7yMpjsp3Ug&oe=62D6E117',
   },
   {
     index: '#22',
@@ -344,48 +387,35 @@ const data = [
     category: 'playroom',
     categoryName: 'Herna',
     instagram: null,
-    facebook:
-      'https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.kuliskov.cz%2Fherna-v-od-kotva-praha-1%3Ffbclid%3DIwAR0JqbDLZoc0W6-5rW2VJXqVa_yHndK1SDzsbuUxXcLoL1FAdteOTfaVEK0&h=AT0trs1YGsQ1YNvaCdbL7IGSsxkJkb8FGicHESv5iNXcpAdg5VrJgObCAXFzoLI_TqTT89pxLTLipI6QoCIUbD9UHB03WeiJ9ZnOBrsAxZbjt-9MadivlwI8EH8Xf291HnCkIQ0&__tn__=R]-R&c[0]=AT3tx5ykUX-5s6yvpicmhoF4AOKBaPgVDhlhTykdK_NeicYvqC2w6gU0WmJV9ws41pP4lNeOkU_GBIzghjg2TukZPs_xlQbyAHeJ0q8cdNpC1LPPsDCSg4oH2DnKKtvSwX9Uj5bdukTcgyo8er22wXFQYLk4HVl-2tg',
+    facebook: 'https://www.facebook.com/kuliskov',
     web: null,
     changingStation: true,
     mat: true,
     barrierFree: true,
     filters: ['inside'],
+    preview:
+      'https://scontent.fprg5-1.fna.fbcdn.net/v/t1.18169-9/545701_278232422256274_262495107_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=cdbe9c&_nc_ohc=70bx--AekssAX8fa6oA&_nc_ht=scontent.fprg5-1.fna&oh=00_AT89LArs30aWS8Q-QRrxKrOQaQeWKF8_4SDSq6eEv1oibQ&oe=62D9F3E0',
   },
   {
     index: '#23',
     latitude: 50.0794885280509,
     longitude: 14.490881609649762,
-    name: 'ROCHER CAFÉ Výběr',
+    name: 'Rocher Café',
     address: 'Révová 14, Praha 10',
     category: 'cafe',
     categoryName: 'Kavárna s koutkem',
     instagram: 'https://www.instagram.com/rochercafe/?hl=cs',
-    facebook: null,
+    facebook: 'https://www.facebook.com/rochercafevyber',
     web: null,
     changingStation: false,
     mat: false,
     barrierFree: false,
     filters: ['inside'],
+    preview:
+      'https://scontent.fprg5-1.fna.fbcdn.net/v/t1.6435-9/194297771_169231151874962_3258527568746362_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=e3f864&_nc_ohc=5vXAzHWKrGkAX_x7dnv&_nc_ht=scontent.fprg5-1.fna&oh=00_AT8KwzzhLL8o--z0FmP39HXjp77Y--IycXTp7U7U8gxGOg&oe=62D80DB1',
   },
   {
     index: '#24',
-    latitude: 50.1007082826067,
-    longitude: 14.397422012167796,
-    name: 'Vejce Dejvice',
-    address: 'Československé armády 872/33,  Praha 6',
-    category: 'restaurant',
-    categoryName: 'Restaurace s koutkem',
-    instagram: 'https://www.instagram.com/vejcedejvice/?hl=cs',
-    facebook: null,
-    web: null,
-    changingStation: false,
-    mat: false,
-    barrierFree: false,
-    filters: ['inside'],
-  },
-  {
-    index: '#25',
     latitude: 50.074548013090535,
     longitude: 14.44028545481177,
     name: 'SKÁKALPES',
@@ -393,12 +423,32 @@ const data = [
     category: 'cafe',
     categoryName: 'Kavárna s koutkem',
     instagram: 'https://www.instagram.com/presoves/',
-    facebook: null,
+    facebook: 'https://www.facebook.com/PRESOVES',
     web: null,
     changingStation: false,
     mat: true,
     barrierFree: false,
     filters: ['inside'],
+    preview:
+      'https://scontent.fprg5-1.fna.fbcdn.net/v/t39.30808-6/283483470_3246147632306889_1579824744244091933_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=a26aad&_nc_ohc=NNdm1AtTAyAAX8qbfPn&tn=Gr987PSlSqfpILEh&_nc_ht=scontent.fprg5-1.fna&oh=00_AT9Q4pOCtB3c4zmm9hO-2mCEES1PnbmG1OFKqcs6czzs3w&oe=62B85B9F',
+  },
+  {
+    index: '#25',
+    latitude: 50.07788591396032,
+    longitude: 14.456315198294313,
+    name: 'Erhartova cukrárna',
+    address: 'Vinohradská 2022/125, Praha 3',
+    category: 'cafe',
+    categoryName: 'Kavárna s koutkem',
+    instagram: 'https://www.instagram.com/erhartovacukrarna/?hl=cs',
+    facebook: 'https://www.facebook.com/pages/Erhartova%20Cukr%C3%A1rna/455166694500039/',
+    web: null,
+    changingStation: false,
+    mat: false,
+    barrierFree: false,
+    filters: ['inside'],
+    preview:
+      'https://scontent.fprg5-1.fna.fbcdn.net/v/t1.6435-9/100083380_2881628155206068_5111336172609601536_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=e3f864&_nc_ohc=GLooc7XcyQcAX-AiJ7B&_nc_ht=scontent.fprg5-1.fna&oh=00_AT-RVlS3GlByY4PEGKTrcgg3ZvEXgPBNRF0Cc0aTBBGL0w&oe=62D931BB',
   },
 ];
 
