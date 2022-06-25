@@ -7,69 +7,66 @@
 .App {
   background-color: var(--background-primary);
   height: 100%;
-  color: var(--font-color); 
+  color: var(--font-color);
+  overflow-y: overlay;
 }
 
 .container {
-display: flex;
-flex-direction: column;
-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
-.header{
+.header {
   display: flex;
   flex-direction: row;
   align-items: baseline;
 }
 
 .map {
-display: none;
+  display: none;
 }
 
-.list-view-mobile-hidden .map  {
-display: flex;
-overflow: hidden;
+.list-view-mobile-hidden .map {
+  display: flex;
+  overflow: hidden;
 }
 
-.list-view-mobile-hidden .list  {
-display: none;
+.list-view-mobile-hidden .list {
+  display: none;
 }
 
-.sidebar{
+.sidebar {
   display: flex;
   flex-direction: column;
-} 
-
-.mobile-filters .filter-list{
-display: flex;
 }
 
-.mobile-filters .list, 
+.mobile-filters .filter-list {
+  display: flex;
+}
+
+.mobile-filters .list,
 .mobile-filters .map,
 .mobile-filters .view-switch {
   display: none;
 }
 
-
 @media (min-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
 
-.container {
-  display: flex;
-  flex-direction: row;
-}
+  .container .map {
+    display: flex;
+  }
 
-.container .map {
-  display: flex;
-}
+  .container .list {
+    display: flex;
+  }
 
-.container .list{
-  display: flex;
-}
-
-.sidebar {
-  overflow-y: scroll;
-  width: 450px;
-}
-
-
+  .sidebar {
+    overflow-y: scroll;
+    width: 450px;
+  }
 }

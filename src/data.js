@@ -450,6 +450,42 @@ const data = [
     preview:
       'https://scontent.fprg5-1.fna.fbcdn.net/v/t1.6435-9/100083380_2881628155206068_5111336172609601536_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=e3f864&_nc_ohc=GLooc7XcyQcAX-AiJ7B&_nc_ht=scontent.fprg5-1.fna&oh=00_AT-RVlS3GlByY4PEGKTrcgg3ZvEXgPBNRF0Cc0aTBBGL0w&oe=62D931BB',
   },
+  {
+    index: '#26',
+    latitude: 50.04644143159999,
+    longitude: 14.549321244966725,
+    name: 'Pivovar Hostivar 1',
+    address: 'Lochotínská 656, Praha 15',
+    category: 'outdoors',
+    categoryName: 'Místo s venkovním hřištěm',
+    instagram: 'https://www.instagram.com/pivovarhostivar/',
+    facebook: 'https://www.facebook.com/Hostivar/',
+    web: null,
+    changingStation: false,
+    mat: false,
+    barrierFree: true,
+    filters: ['outside'],
+    preview:
+      'https://scontent-prg1-1.xx.fbcdn.net/v/t39.30808-6/275972435_4981499245260415_7211094304938154919_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=MwaHxXMM5woAX8kg8CV&tn=Gr987PSlSqfpILEh&_nc_ht=scontent-prg1-1.xx&oh=00_AT__eOLTxFGA1J7PBxEMKheUXON--SsIM2JI3U9TrNWMow&oe=62B75B92',
+  },
+  {
+    index: '#27',
+    latitude: 50.76091935243121,
+    longitude: 14.550910231022732,
+    name: 'La Piccolina',
+    address: 'Dvořákova 359, Nový Bor',
+    category: 'outdoors',
+    categoryName: 'Místo s venkovním hřištěm',
+    instagram: null,
+    facebook: 'https://www.facebook.com/la.piccolina.nb',
+    web: null,
+    changingStation: false,
+    mat: false,
+    barrierFree: true,
+    filters: ['outside'],
+    preview:
+      'https://scontent-prg1-1.xx.fbcdn.net/v/t39.30808-6/288446448_2137914816382858_7442323708455447643_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=8NIzuN_koKIAX-KIbSS&_nc_ht=scontent-prg1-1.xx&oh=00_AT9GrGlLVUUWEvE4vp8yQKCj09V8tD2G7PR3A9E2nL9LTA&oe=62B91E71',
+  },
 ];
 
 export default data;
