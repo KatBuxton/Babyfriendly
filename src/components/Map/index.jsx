@@ -105,18 +105,20 @@ export const Map = ({ selectedLocation, filteredItems, setSelectedLocation, inve
               <div className="popup">
                 <div
                   className={selectedLocation.category}
-                  style={{ backgroundImage: `url(${selectedLocation.preview})` }}
+                  style={{
+                    backgroundImage: `url(${selectedLocation.preview})`,
+                  }}
                 ></div>
                 <div className="address">{selectedLocation.address}</div>
                 <div className="place-name">{selectedLocation.name}</div>
                 <div className="category-name">{selectedLocation.categoryName}</div>
-                {selectedLocation.changingStation === true ? (
+                {selectedLocation.changingStation === 'changing-station' ? (
                   <div className="equipment">Přebalovací pult</div>
                 ) : null}
-                {selectedLocation.mat === true ? (
+                {selectedLocation.mat === 'mat' ? (
                   <div className="equipment">Čistý koberec/podložka</div>
                 ) : null}
-                {selectedLocation.barrierFree === true ? (
+                {selectedLocation.barrierFree === 'barrier-free' ? (
                   <div className="equipment">Bez bariér</div>
                 ) : null}
                 <div className="social-icons">
