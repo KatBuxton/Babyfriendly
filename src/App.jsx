@@ -47,7 +47,7 @@ function App() {
   } else if (filtersVisible === false && listViewVisible === false) {
     mobileView = 'container list-view-mobile-hidden';
   } else {
-    mobileView = 'container';
+    mobileView = 'container list-view-mobile';
   }
 
   useEffect(() => {

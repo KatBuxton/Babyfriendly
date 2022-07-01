@@ -1,3 +1,7 @@
+.list-view-mobile .theme-switch-wrapper {
+  display: none;
+}
+
 .theme-switch-wrapper {
   display: flex;
   align-items: center;
