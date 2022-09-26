@@ -5,6 +5,7 @@ import ReactMapGL, { Marker, Popup, NavigationControl, FlyToInterpolator } from 
 import globeUrl from '../../img/globe.svg';
 import facebookUrl from '../../img/facebook.svg';
 import instagramUrl from '../../img/instagram.svg';
+import reviewUrl from '../../img/review-icon.svg';
 
 const initialCoords = {
   latitude: 50.08854,
@@ -122,7 +123,7 @@ export const Map = ({ selectedLocation, filteredItems, setSelectedLocation, inve
                   <div className="equipment">Bez bariér</div>
                 ) : null}
                 <div className="social-icons">
-                  {selectedLocation.instagram !== null ? (
+                  {selectedLocation.instagram !== '' ? (
                     <a
                       href={selectedLocation.instagram}
                       target="_blank"
@@ -132,7 +133,7 @@ export const Map = ({ selectedLocation, filteredItems, setSelectedLocation, inve
                       <img src={instagramUrl} alt="ikona instagram" />
                     </a>
                   ) : null}
-                  {selectedLocation.facebook !== null ? (
+                  {selectedLocation.facebook !== '' ? (
                     <a
                       href={selectedLocation.facebook}
                       target="_blank"
@@ -142,7 +143,7 @@ export const Map = ({ selectedLocation, filteredItems, setSelectedLocation, inve
                       <img src={facebookUrl} alt="ikona facebooku" />
                     </a>
                   ) : null}
-                  {selectedLocation.web !== null ? (
+                  {selectedLocation.web !== '' ? (
                     <a
                       href={selectedLocation.web}
                       target="_blank"
@@ -150,6 +151,16 @@ export const Map = ({ selectedLocation, filteredItems, setSelectedLocation, inve
                       className="social-link"
                     >
                       <img src={globeUrl} alt="ikona globu" />
+                    </a>
+                  ) : null}
+                  {selectedLocation.review !== '' ? (
+                    <a
+                      href={selectedLocation.review}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="social-link"
+                    >
+                      <img src={reviewUrl} alt="ikona hodnoceni" />
                     </a>
                   ) : null}
                 </div>
