@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 .list-item {
-  background-image: url('../../img/placeholders/restaurant.png');
+  /* background-image: url('../../img/placeholders/restaurant.png'); */
   background-size: cover;
+  background-position: center;
   min-height: 170px;
   width: 100%;
   display: flex;
@@ -42,14 +43,14 @@
   font-size: smaller;
 }
 
-.babysitting.list-item {
+/* .babysitting.list-item {
   background-image: url('../../img/placeholders/babysitting.png');
   background-position: center;
 }
 
 .cafe.list-item {
-  /* background-image: url('../../img/placeholders/cafe.png'); */
-  /* background-image: url('https://scontent.fprg5-1.fna.fbcdn.net/v/t39.30808-6/283674615_526150395860566_8153151709648033473_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=a26aad&_nc_ohc=HwqsrVXY5PAAX8heYY5&_nc_ht=scontent.fprg5-1.fna&oh=00_AT862UcshKDqWqO3eU50854YZuzgx1FkrzO5QacWElmYVQ&oe=62B76FFD'); */
+  background-image: url('../../img/placeholders/cafe.png');
+  background-image: url('https://scontent.fprg5-1.fna.fbcdn.net/v/t39.30808-6/283674615_526150395860566_8153151709648033473_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=a26aad&_nc_ohc=HwqsrVXY5PAAX8heYY5&_nc_ht=scontent.fprg5-1.fna&oh=00_AT862UcshKDqWqO3eU50854YZuzgx1FkrzO5QacWElmYVQ&oe=62B76FFD');
   background-position: center;
 }
 
@@ -71,4 +72,4 @@
 .playroom.list-item {
   background-image: url('../../img/placeholders/playroom.png');
   background-position: center;
-}
+} */

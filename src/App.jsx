@@ -9,7 +9,7 @@ import { FilterSwitch } from './components/FilterSwitch';
 import { SearchBar } from './components/SearchBar';
 import { ThemeSwitch } from './components/ThemeSwitch';
 // import useLocalStorage from 'use-local-storage';
-import data from './data.js';
+import data from './data1.js';
 
 function App() {
   const [listViewVisible, setListViewVisible] = useState(false);
