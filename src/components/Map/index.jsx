@@ -6,6 +6,7 @@ import globeUrl from '../../img/globe.svg';
 import facebookUrl from '../../img/facebook.svg';
 import instagramUrl from '../../img/instagram.svg';
 import reviewUrl from '../../img/review-icon.svg';
+import closeUrl from '../../img/close.svg';
 
 const initialCoords = {
   latitude: 50.08854,
@@ -15,8 +16,13 @@ const initialCoords = {
 
 export const Map = ({ selectedLocation, filteredItems, setSelectedLocation, invert }) => {
   const [viewport, setViewport] = useState(initialCoords);
+  const [instaVisible, setInstaVisible] = useState(true);
 
   const notInitialRender = useRef(false);
+
+  const hideInsta = () => {
+    setInstaVisible((prev) => !prev);
+  };
 
   useEffect(() => {
     if (notInitialRender.current) {
@@ -168,13 +174,16 @@ export const Map = ({ selectedLocation, filteredItems, setSelectedLocation, inve
             </Popup>
           </div>
         )}
-        <div className="instagram">
-          <a href="https://www.instagram.com/baby_friendly_cz/" target="_blank" rel="noreferrer">
-            Pro víc inspirace<br></br>sledujte<br></br>
-            <img src={instagramUrl} alt="ikona instagram" />
-            <br></br>@baby_friendly_cz
-          </a>
-        </div>
+        {instaVisible && (
+          <div className="instagram">
+            <img src={closeUrl} alt="zavrit" onClick={hideInsta} className="insta-close" />
+            <a href="https://www.instagram.com/baby_friendly_cz/" target="_blank" rel="noreferrer">
+              Pro víc inspirace<br></br>sledujte<br></br>
+              <img src={instagramUrl} alt="ikona instagram" className="insta-icon" />
+              <br></br>@baby_friendly_cz
+            </a>
+          </div>
+        )}
         <NavigationControl style={navControlStyle} showZoom={true} />
       </ReactMapGL>
     </div>

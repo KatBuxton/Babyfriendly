@@ -166,8 +166,15 @@ a:visited {
   color: black;
 }
 
-.instagram img {
+.insta-icon {
   margin: 10px;
+}
+
+.insta-close {
+  width: 15px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
 }
 
 @media (min-width: 768px) {
