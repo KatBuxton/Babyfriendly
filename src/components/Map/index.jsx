@@ -7,11 +7,20 @@ import facebookUrl from '../../img/facebook.svg';
 import instagramUrl from '../../img/instagram.svg';
 import reviewUrl from '../../img/review-icon.svg';
 import closeUrl from '../../img/close.svg';
+import ReactGA from 'react-ga';
 
 const initialCoords = {
   latitude: 50.08854,
   longitude: 14.42991,
   zoom: 13,
+};
+
+const eventTracker = (category, action, label) => {
+  ReactGA.event({
+    category: category,
+    action: action,
+    label: label,
+  });
 };
 
 export const Map = ({ selectedLocation, filteredItems, setSelectedLocation, invert }) => {
@@ -97,7 +106,13 @@ export const Map = ({ selectedLocation, filteredItems, setSelectedLocation, inve
             offsetTop={-50}
             key={place.index}
           >
-            <button className="marker-button" onClick={() => setSelectedLocation(place)}></button>
+            <button
+              className="marker-button"
+              onClick={() => {
+                setSelectedLocation(place);
+                eventTracker('Map', 'marker clicked', `${place.name}`);
+              }}
+            ></button>
           </Marker>
         ))}
         {selectedLocation && (
@@ -107,7 +122,10 @@ export const Map = ({ selectedLocation, filteredItems, setSelectedLocation, inve
               longitude={selectedLocation.longitude}
               key={selectedLocation.index}
               offsetTop={-60}
-              onClose={() => setSelectedLocation(null)}
+              onClose={() => {
+                setSelectedLocation(null);
+                eventTracker('Map', 'popup closed', `${selectedLocation.name}`);
+              }}
             >
               <div className="popup">
                 <div
@@ -177,7 +195,12 @@ export const Map = ({ selectedLocation, filteredItems, setSelectedLocation, inve
         {instaVisible && (
           <div className="instagram">
             <img src={closeUrl} alt="zavrit" onClick={hideInsta} className="insta-close" />
-            <a href="https://www.instagram.com/baby_friendly_cz/" target="_blank" rel="noreferrer">
+            <a
+              href="https://www.instagram.com/baby_friendly_cz/"
+              target="_blank"
+              rel="noreferrer"
+              onClick={() => eventTracker('Map', 'instagram visited')}
+            >
               Pro víc inspirace<br></br>sledujte<br></br>
               <img src={instagramUrl} alt="ikona instagram" className="insta-icon" />
               <br></br>@baby_friendly_cz
