@@ -1,11 +1,21 @@
 import React from 'react';
 import './style.css';
 import { ListItem } from '../ListItem';
+import ReactGA from 'react-ga';
+
+const eventTracker = (category, action, label) => {
+  ReactGA.event({
+    category: category,
+    action: action,
+    label: label,
+  });
+};
 
 export const List = ({ filteredItems, setSelectedLocation, setListViewVisible }) => {
   const handleClick = (place) => {
     setSelectedLocation(place);
     setListViewVisible(false);
+    eventTracker('List', 'list item clicked', `${place.name}`);
   };
 
   return (

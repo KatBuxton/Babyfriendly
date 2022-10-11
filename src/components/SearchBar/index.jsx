@@ -1,6 +1,15 @@
 import React from 'react';
 import './style.css';
 import data from '../../data.js';
+import ReactGA from 'react-ga';
+
+const eventTracker = (category, action, label) => {
+  ReactGA.event({
+    category: category,
+    action: action,
+    label: label,
+  });
+};
 
 export const SearchBar = ({
   setFilteredItems,
@@ -46,7 +55,10 @@ export const SearchBar = ({
         className="search-input"
         placeholder="Hledat podle názvu nebo adresy"
         value={searchInputValue}
-        onChange={(e) => handleChange(e.target.value)}
+        onChange={(e) => {
+          handleChange(e.target.value);
+          eventTracker('SearchBar', 'search input changed');
+        }}
       />
       <button
         type="reset"

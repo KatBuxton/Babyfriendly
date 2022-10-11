@@ -2,6 +2,15 @@ import React from 'react';
 import './style.css';
 import filters from './filters';
 import { FilterItem } from '../FilterItem';
+import ReactGA from 'react-ga';
+
+const eventTracker = (category, action, label) => {
+  ReactGA.event({
+    category: category,
+    action: action,
+    label: label,
+  });
+};
 
 export const Filters = ({
   setSelectedFilters,
@@ -14,8 +23,10 @@ export const Filters = ({
     if (isChecked) {
       setSelectedFilters((prevState) => [...prevState, item.name]);
       setSelectedLocation(null);
+      eventTracker('Filters', 'filter checked', `${item.name}`);
     } else {
       setSelectedFilters((prevState) => prevState.filter((name) => name !== item.name));
+      eventTracker('Filters', 'filter unchecked', `${item.name}`);
     }
   };
 

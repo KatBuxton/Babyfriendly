@@ -10,6 +10,15 @@ import { SearchBar } from './components/SearchBar';
 import { ThemeSwitch } from './components/ThemeSwitch';
 // import useLocalStorage from 'use-local-storage';
 import data from './data1.js';
+import ReactGA from 'react-ga';
+
+const eventTracker = (category, action, label) => {
+  ReactGA.event({
+    category: category,
+    action: action,
+    label: label,
+  });
+};
 
 function App() {
   const [listViewVisible, setListViewVisible] = useState(false);
@@ -95,6 +104,7 @@ function App() {
             theme={theme}
             setTheme={setTheme}
             filtersVisible={filtersVisible}
+            onClick={() => eventTracker('App', 'theme switched', `${theme}`)}
           />
           {isDesktop ? (
             <>
