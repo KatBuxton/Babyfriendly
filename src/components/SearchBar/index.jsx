@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.css';
-import data from '../../data.js';
+import data from '../../data1.js';
 import ReactGA from 'react-ga';
 
 const eventTracker = (category, action, label) => {
