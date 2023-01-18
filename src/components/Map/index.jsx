@@ -81,10 +81,10 @@ export const Map = ({ selectedLocation, filteredItems, setSelectedLocation, inve
           sources: {
             'raster-tiles': {
               type: 'raster',
-              tiles: ['https://mapserver.mapy.cz/base-m/{z}-{x}-{y}'],
+              tiles: ['https://tile.openstreetmap.org/{z}/{x}/{y}.png'],
               tileSize: 256,
               attribution:
-                'Mapové podklady od <a target="_top" rel="noopener" href="https://mapy.cz/">Seznam.cz</a> a <a target="_top" rel="noopener" href="http://openstreetmap.org">OpenStreetMap</a>.',
+                'Map tiles by <a target="_top" rel="noopener" href="https://tile.openstreetmap.org/">OpenStreetMap tile servers</a>, under the <a target="_top" rel="noopener" href="https://operations.osmfoundation.org/policies/tiles/">tile usage policy</a>. Data by <a target="_top" rel="noopener" href="http://openstreetmap.org">OpenStreetMap</a>',
             },
           },
           layers: [
